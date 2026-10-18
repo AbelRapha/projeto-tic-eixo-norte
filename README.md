@@ -94,6 +94,8 @@ Projeto TIC Eixo Norte/
 ├── 03 - Contrato e Termos Aditivos .... 7 arquivos
 ├── 04 - Publicações Oficiais ......... 18 arquivos
 ├── 05 - Audiência Pública ............. 4 arquivos
+├── 06 - Plantas do projeto (CAD) ...... 43 arquivos DWG
+├── 07 - Análise Econômica ............. 1 arquivo
 └── Dados Estruturados ................. 3 planilhas + guia
                                   Total: 78 documentos
 ```
@@ -106,6 +108,8 @@ Projeto TIC Eixo Norte/
 | **`04 - Publicações Oficiais`** | Publicações no **DOE/SP** — decretos, avisos de licitação, consulta/audiência pública, resultado, homologação, extrato do TAM · atas do CGPPP e do CDPED, de 2013 a 2025 |
 | **`05 - Audiência Pública`** | Apresentação da audiência de 16/08/2021 · contribuições recebidas · regulamento (português) · *Regulation Public Hearing* (inglês) |
 | **`Dados Estruturados`** | Planilhas CSV extraídas automaticamente dos PDFs, organizando os empreendimentos e obrigações por **quilometragem** ao longo dos 104 km da concessão · ver [`LEIA-ME.md`](Dados%20Estruturados/LEIA-ME.md) |
+| **`06 - Plantas do projeto (CAD)`** | **43 arquivos AutoCAD (.dwg)** do projeto conceitual, organizados em **5 temas**: topografia e base geográfica · geometria e articulação do traçado · mosaicos por trecho · elementos de projeto · imagens e fotos aéreas · ver [`README.md`](06%20-%20Plantas%20do%20projeto%20(CAD)/README.md) |
+| **`07 - Análise Econômica`** | Estudo de viabilidade econômico-financeira apresentado na audiência pública |
 
 > 💡 Os **nomes dos arquivos foram integralmente preservados** — os documentos apenas foram reorganizados em pastas. Assim, qualquer referência em pesquisa, relatório ou notícia continua casando com o nome original.
 
@@ -155,6 +159,14 @@ O que os documentos oferecem é a **referência linear por quilometragem (chaina
 A **única** referência a coordenadas está no Anexo 1 do TAM 02-2025, que declara que elas foram definidas no arquivo `TIC_Agua_Branca_Conceitual_02` — **fornecido pela concessionária e não incluído aqui**.
 
 Como a quilometragem é **relativa** e o datum nunca é declarado nos documentos, converter `km 59,650` em latitude/longitude exigiria inventar uma referência — e não é isso que fazemos. No lugar, deixamos registrado no `LEIA-ME.md` **quais dados georreferenciados são exigidos contratualmente** e **como solicitá-los** (Lei de Acesso à Informação à SPI e à Artesp).
+
+### 💡 Mas há uma pista: os arquivos CAD
+
+A pasta [`06 - Plantas do projeto (CAD)/`](06%20-%20Plantas%20do%20projeto%20(CAD)/) contém **43 arquivos AutoCAD (.dwg)** do projeto conceitual — incluindo as bases de estações, limites municipais, faixa de domínio e a malha geral de estacas.
+
+Arquivos DWG **podem carregar o sistema de coordenadas na própria definição do desenho**. Abrindo um deles no AutoCAD ou no QCAD e consultando `GEOGRAPHICPIN` ou as propriedades do *World UCS*, é possível descobrir se há SIRGAS 2000 (fuso 23 S) e, portanto, **destravar a conversão de quilometragem para latitude/longitude**.
+
+👉 **Se você fazer essa verificação, documente no [`README.md` da pasta 06](06%20-%20Plantas%20do%20projeto%20(CAD)/README.md)** — é o passo que falta para este repositório ter uma camada geográfica de verdade.
 
 ---
 
