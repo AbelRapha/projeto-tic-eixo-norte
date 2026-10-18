@@ -18,6 +18,7 @@ O objetivo é **estruturar os dados presentes em anexos e contratos públicos** 
 - [Como usar](#-como-usar)
 - [Dados estruturados e georreferenciamento](#-dados-estruturados-e-georreferenciamento)
 - [Interferências urbanas](#-interferências-urbanas)
+- [Licenciamento ambiental municipal](#-licenciamento-ambiental-municipal)
 - [Análise econômica](#-análise-econômica)
 - [Evolução do escopo — por que comparar edital e contrato importa](#-evolução-do-escopo--por-que-comparar-edital-e-contrato-importa)
 - [Como contribuir](#-como-contribuir)
@@ -98,6 +99,8 @@ Projeto TIC Eixo Norte/
 ├── 05 - Audiência Pública ............. 4 arquivos
 ├── 06 - Plantas do projeto (CAD) ...... 43 arquivos DWG + mapas
 ├── 07 - Análise Econômica ............. 1 arquivo (63 páginas)
+├── 08 - Portais de transparência ..... documentos municipais por município
+├── 09 - Informações Artesp ........... documentos do órgão regulador
 └── Dados Estruturados ................. 5 planilhas + guia
                                   Total: 78 documentos
 ```
@@ -112,6 +115,8 @@ Projeto TIC Eixo Norte/
 | **`Dados Estruturados`** | Planilhas CSV extraídas automaticamente dos PDFs, organizando os empreendimentos e obrigações por **quilometragem** ao longo dos 104 km da concessão · mais o inventário das **interferências urbanas**, extraído do CAD · ver [`LEIA-ME.md`](Dados%20Estruturados/LEIA-ME.md) |
 | **`06 - Plantas do projeto (CAD)`** | **43 arquivos AutoCAD (.dwg)** organizados em **5 temas** (topografia e base geográfica · geometria e articulação do traçado · mosaicos por trecho · elementos de projeto · imagens e fotos aéreas) **+ `00 - Consolidado`**, um desenho único do traçado São Paulo → Campinas com **16 camadas filtráveis**, **+ `Mapas de interferencias`**, com 9 mapas derivados · ver [`README.md`](06%20-%20Plantas%20do%20projeto%20(CAD)/README.md) |
 | **`07 - Análise Econômica`** | **Relatório Financeiro Final — Análise de Viabilidade Econômico-Financeira** do projeto TIC Eixo Norte (63 pág., ago/2021) · ver [Análise econômica](#-análise-econômica) |
+| **`08 - Portais de transparência`** | Atos **ambientais e urbanísticos emitidos pelos municípios** ao longo do traçado, organizados por prefeitura — complementares ao Anexo IV, que trata do enquadramento estadual · ver [`README.md`](08%20-%20Informa%C3%A7%C3%B5es%20dos%20portais%20de%20transpar%C3%AAncia%20dos%20munic%C3%ADpios/README.md) |
+| **`09 - Informações Artesp`** | Documentos baixados do portal da **Artesp**, o órgão regulador — incluindo a **versão legível do TAM 01/2024** · ver [`README.md`](09%20-%20Informa%C3%A7%C3%B5es%20Artesp/README.md) |
 
 > 💡 Os **nomes dos arquivos foram integralmente preservados** — os documentos apenas foram reorganizados em pastas. Assim, qualquer referência em pesquisa, relatório ou notícia continua casando com o nome original.
 
@@ -135,6 +140,7 @@ Projeto TIC Eixo Norte/
 - **Entender a infraestrutura e o investimento:** consulte `02 - Anexos` → Anexo I (infraestrutura), Anexo II (engenharia e material rodante) e Anexo IV (meio ambiente e social).
 - **Entender o compromisso firmado:** vá a `03 - Contrato e Termos Aditivos`. Os **Termos Aditivos (TAM 01/2024 e TAM 02/2025)** evidenciam o que mudou em relação ao contrato original.
 - **Entender a economia do projeto:** consulte `07 - Análise Econômica` para acessar as premissas do modelo financeiro que deu origem aos valores do edital.
+- **Conferir o que cada prefeitura aprovou ou vetou:** vá para [Licenciamento ambiental municipal](#-licenciamento-ambiental-municipal).
 - **Acompanhar as decisões do poder concedente:** use `04 - Publicações Oficiais`, pois as atas do **CGPPP** e do **CDPED** registram as reuniões deliberativas do Estado.
 - **Saber quais redes de serviço a ferrovia vai encontrar ou desviar:** vá para [Interferências urbanas](#-interferências-urbanas) — o inventário por concessionária, os mapas e as cláusulas do contrato que definem quem paga por cada remanejamento.
 - **Para pesquisas e jornalismo:** cruzar `04 - Publicações Oficiais` com `03 - Contrato e Termos Aditivos` é a forma mais direta de comparar compromissos assumidos e entregas realizadas.
@@ -228,6 +234,29 @@ O **Anexo III.C** registra, na íntegra, o cadastro de **travessias já solicita
 ### Mapas
 
 Nove mapas derivados estão em [`06 - Plantas do projeto (CAD)/Mapas de interferencias/`](06%20-%20Plantas%20do%20projeto%20(CAD)/Mapas%20de%20interferencias/): plantas por concessionária, o traçado completo sobreposto, a dispersão ao longo dos 104 km e um mapa de calor de densidade por quilômetro.
+
+---
+
+## 🌿 Licenciamento ambiental municipal
+
+O **Anexo IV** do edital trata do licenciamento no **âmbito estadual** (CETESB). Mas a obra ainda atravessa o **aparato municipal** — e são esses atos, publicados nos portais de transparência das prefeituras, que registram o que foi **aprovado, condicionado ou recusado** em cada cidade.
+
+A pasta [`08 - Portais de transparência`](08%20-%20Informa%C3%A7%C3%B5es%20dos%20portais%20de%20transpar%C3%AAncia%20dos%20munic%C3%ADpios/) organiza esses documentos **por município**.
+
+### O caso de Vinhedo — 6 documentos
+
+| Documento | Órgão | Ato |
+|---|---|---|
+| Autorização Ambiental nº 28477/2026 | CETESB | eAmbiente CETESB.068292/2025-77 |
+| Parecer Técnico nº 026/26/IL (25/03/2026) | CETESB | supressão de vegetação nativa, intervenção em APP e corte de árvores isoladas |
+| Licença Ambiental de Instalação nº 2858 | CETESB | Processo de Impacto CETESB.067919/2025-89 |
+| Planta Ambiental — mapa síntese do diagnóstico ambiental | Concessionária | ASV · Jundiaí, Louveira, Vinhedo, Valinhos e Campinas |
+| Entorno da passagem de fauna | Concessionária | caixa BSTM Ø 2,00 m, tipo E1, **`km 79+464`** |
+| TCRA — Termo de Compromisso de Regularização Ambiental | Concessionária | escaneado, sem camada de texto |
+
+Todos os atos se referem ao **Trecho 3, `km 62+720` ao `km 106+700`** — o segmento **Jundiaí / Campinas**, que corresponde a Jundiaí–Louveira · Louveira–Valinhos · Valinhos–Campinas na divisão oficial da concessão. A planta ambiental aponta o **Rio Capivari** e os **córregos da Água do Buracão** como hidrografia relevante.
+
+> ⚠️ **Sobre o datum:** a planta ambiental **declara SIRGAS 2000 / UTM 23 S**. É a primeira vez que o datum aparece escrito — mas a malha plotada, lida como UTM 23S, cai no interior de São Paulo, a centenas de quilômetros de Campinas. **A declaração não se confirma em campo**: os números continuam em sistema local.
 
 ---
 
