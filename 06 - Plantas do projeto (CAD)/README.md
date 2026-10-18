@@ -2,7 +2,7 @@
 
 Arquivos **AutoCAD (.dwg)** do projeto conceitual do Trem Intercidades — Eixo Norte, extraídos dos anexos técnicos do edital.
 
-São **43 arquivos DWG** organizados em **5 pastas temáticas**, mais uma pasta **`00 - Consolidado`** com o traçado completo unificado.
+São **43 arquivos DWG** organizados em **5 pastas temáticas**, mais uma pasta **`00 - Consolidado`** com o traçado completo unificado e a pasta **`Mapas de interferencias`** com mapas derivados.
 
 | Pasta | Arquivos | Tema |
 |---|---|---|
@@ -86,7 +86,31 @@ Camadas temáticas do traçado completo (todas com prefixo `TIC_`).
 | `ACAD-Trecho Total_TIC_TALUDES E MUROS.dwg` | **Taludes e muros de contenção** |
 | `ACAD-Trecho Total_TIC_DRENAGEM_DISPOSITIVOS.dwg` | **Drenagem e dispositivos** de drenagem |
 | `ACAD-Trecho Total_TIC_INTERFERENCIAS.dwg` | **Interferências** com redes existentes |
+
+> 📌 Este é o arquivo mais rico do projeto para **interferências urbanas**. Tem
+> 1.903 entidades em 18 camadas temáticas (`DUTOS_SABESP`, `DUTOS_ELETROPAULO`,
+> `DUTOS_LINHAS DE ALTA TENSÃO`, `DUTO_CABO ÓPTICO`, `DUTOS_TRAVESSIA_COMGÁS`…),
+> com rótulos que identificam nominalmente cada rede. Foi convertido para
+> [`interferencias_desenho.csv`](../Dados%20Estruturados/interferencias_desenho.csv),
+> que traz concessionária, tipo (aérea/subterrânea), descrição e quilometragem.
+> Mapas por concessionária em [`Mapas de interferencias/`](Mapas%20de%20interferencias/).
 | `ACAD-Trecho Total_TIC_Elementos.dwg` | **Elementos** do traçado |
+
+### `Mapas de interferencias` — 9 PNGs
+
+Derivados do `TIC_INTERFERENCIAS.dwg`. Coordenadas no **sistema local do desenho** (não georreferenciado — ver `📐 Sobre o datum`).
+
+| Arquivo | Conteúdo |
+|---|---|
+| `01_Saneamento_SABESP` | Água, esgoto, interceptor, drenagem, galerias |
+| `02_Energia_Eletropaulo_CPFL_CTEEP` | Rede de distribuição e travessias de alta tensão |
+| `03_Energia_Transmissao_e_Rede_Eletrica` | Linhas de transmissão e postes |
+| `04_Telefonia` | Cabos telefônicos e dutos |
+| `05_Gas_Comgas_Elekeiroz` | Gás natural |
+| `06_Fibra_Optica` | TELEMAR, IQARA, IMPSAT, Global Crossing |
+| `07_Todas_as_interferencias` | Todas as redes sobrepostas |
+| `10_Distribuicao_por_km_e_concessionaria` | Dispersão ao longo dos 104 km |
+| `11_Densidade_interferencias_por_km` | Mapa de calor por quilômetro |
 
 ### `05 - Imagens e fotos aéreas` — 6 arquivos
 
@@ -111,10 +135,67 @@ Pranchas de imagens aéreas/imagens de satélite com as fotos removidas (`SEM FO
 | Perfis e traçado em texto | `../02 - Anexos/ANEXO I.2-AREAS` |
 | Localização de estações e subestações em tabela | `../Dados Estruturados/ativos_por_km.csv` |
 | Localização das obras do Poder Concedente | `../Dados Estruturados/intervencoes_poder_concedente.csv` |
+| **Interferências com redes existentes** | `../Dados Estruturados/interferencias_desenho.csv` |
+| Mapas de interferências por concessionária | `./Mapas de interferencias/` |
 
 ---
 
-## 📐 Sobre as coordenadas nestas plantas
+## 🔎 Como navegar estes arquivos (o erro mais comum)
+
+**Ao abrir qualquer um destes DWGs, a tela parece quase vazia. Isso é esperado — e não é defeito do arquivo.**
+
+### Por quê
+
+Estes desenhos têm **extensão de ~41 km × 68 km** (Barra Funda → Campinas), mas o conteúdo é formado por **elementos minúsculos e dispersos**. Exemplo real em `ACAD-Trecho Total_TIC_INTERFERENCIAS.dwg`:
+
+| Métrica | Valor |
+|---|---|
+| Entidades | 1.903 |
+| Polilinhas | 994 |
+| **Comprimento mediano de uma polilinha** | **5,0 m** |
+| Comprimento máximo | 1.368 m |
+
+Numa janela de 41 km de largura, um elemento de 5 m ocupa **0,012% da tela** — praticamente invisível.
+
+O motivo é a natureza do levantamento: o arquivo de **interferências** mapeia apenas os **pontos onde as redes de utilities cruzam a ferrovia** (sabesp, ELETROPAULO, telefonia, gás natural, cabos ópticos, linhas de alta tensão). São fragmentos curtos e pontuais, não uma malha contínua.
+
+### Como ver o conteúdo
+
+Use **janelas de zoom pequenas** (500 m a 5 km):
+
+```text
+ZOOM
+W                       ; janela retangular
+308000,7396000           ; canto inferior esquerdo
+330000,7434000           ; canto superior direito
+```
+
+Janelas sugeridas para o arquivo de interferências:
+
+| Objetivo | Comando |
+|---|---|
+| Trecho sul concentrado (SABESP, ELETROPAULO, telefonia, gás) | `ZOOM` `W` → `308000,7396000` → `330000,7434000` |
+| Uma estação específica (ex.: **Jundiaí**) | `ZOOM` `W` → `307000,7431500` → `309500,7435500` |
+| Trecho norte (só linhas de alta tensão e transmissão) | `ZOOM` `W` → `288000,7455000` → `300000,7465500` |
+
+### Comandos úteis
+
+```text
+Z          ; zoom interativo
+ZE         ; zoom para_extents (mostra TUDO — e por isso parece vazio)
+ZW         ; zoom por janela (use este)
+LAYISO "DUTOS_SABESP"   ; isola uma camada
+LAYFRL *                ; congela todas as outras
+QSELECT                 ; filtrar por propriedade
+LIST / QSELECT          ; inspecionar entidades e descobrir coordenadas
+ID                       ; clicar num ponto e ler X, Y
+```
+
+> 💡 **Dica:** use o comando `ID` e clique num elemento para ler suas coordenadas exatas — é a forma mais rápida de localizar um duto, uma interferência ou uma obra de arte.
+
+> 🎯 **Para uma visão geral de todo o traçado**, use antes o desenho consolidado em [`00 - Consolidado/`](00%20-%20Consolidado/README.md), que já vem com o eixo, as estações e as obras de arte georreferenciadas lado a lado.
+
+---
 
 Os DWGs usam **coordenadas projetadas** (faixa E 286.000–331.000 / N 7.390.000–7.470.000), com geometria equivalente a uma transcversa de Mercator de meridiano central **−45°** e fator de escala **0,9996** — ou seja, a mesma configuração do **UTM 23 Sul**.
 
