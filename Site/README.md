@@ -1,66 +1,143 @@
 # 🌐 Site do Projeto — TIC Eixo Norte
 
-Espaço dedicado ao **site de project's documentation and citizen access** sobre a concessão do Trem Intercidades — Eixo Norte.
+Site de acesso público sobre a concessão do **Trem Intercidades — Eixo Norte**.
 
-> 🚧 **Em construção.** Esta pasta foi criada na reorganização do repositório e será preenchida conforme a definição da stack.
+| Arquivo | Descrição |
+|---|---|
+| `index.html` | Página única, com as 4 seções principais |
+| `assets/css/style.css` | Folha de estilo completa (responsiva, sem framework) |
+| `assets/js/main.js` | Menu móvel, abas, filtro, contadores, scroll-spy, revelação |
+| `assets/img/` | Imagens usadas |
+| `CREDITOS-IMAGENS.md` | **Origem e direitos de uso de cada imagem — leia antes de publicar** |
 
 ---
 
-## 🎯 Objetivo do site
+## 🚀 Como abrir
 
-Tornar os **dados públicos** desta concessão acessíveis a cidadãos que não são especialistas em infraestrutura ferroviária:
+**Opção 1 — abrir direto no navegador**
 
-| Público-alvo | O que precisa encontrar |
-|---|---|
-| **Cidadão comum** | "O que está sendo construído perto de mim? Quanto custa? Quando abre?" |
-| **Morador de área afetada** | "Vai passar perto da minha casa? Tem desapropriação? Tem obra de arte?" |
-| **Pesquisador / jornalista** | Dados estruturados, cronologia, comparações entre edital e contrato |
-| **Participante de audiência pública** | Onde estão os anexos, contratos e termos aditivos que fundamentam as decisões |
+```bash
+# a partir da pasta Site/
+start index.html
+```
 
----
+**Opção 2 — servidor local** (recomendado, evita restrição de `file://`)
 
-## 📦 O que o site vai consumir
-
-Tudo vem de [`../Dados Públicos/`](../Dados%20P%C3%BAblicos/), sem duplicar arquivos:
-
-| Fonte | Uso previsto |
-|---|---|
-| `10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Estruturados/*.csv` | Tabelas de trechos, ativos por km, intervenções e interferências — **ideais para gráficos e mapas** |
-| `01` a `09` | Documentos-fonte para download e citação |
-| `06 .../00 - Consolidado/CONSOLIDADO-TIC-EIXO-NORTE.png` | Imagem do traçado completo |
-| [`../Agentes/`](../Agentes/) | Dados atualizados periodicamente por agentes de IA |
+```bash
+cd Site
+python -m http.server 8000
+# abra http://localhost:8000
+```
 
 ---
 
-## 💡 Stack sugerida
+## ⚠️ Os links para documentos e onde hospedar
 
-Não há escolha definida ainda. Opções que combinam bem com um repositório público e estático:
+Os botões que levam aos documentos públicos usam caminho relativo para fora da pasta `Site/`:
 
-| Opção | Quando faz sentido |
+```
+../Dados%20Públicos/01%20-%20Edital%20e%20Minutas/
+```
+
+Isso **funciona** em dois cenários:
+
+✅ Abrindo `Site/index.html` direto do disco (`file://`)
+✅ Publicando **o repositório inteiro** — GitHub Pages, Vercel, Cloudflare Pages
+
+…e **não funciona** se apenas a pasta `Site/` for publicada sozinha.
+
+> 💡 **Recomendação:** ao publicar, use a **raiz do repositório** como pasta do site e aponte para `/Site/`.
+
+---
+
+## 🎨 Estrutura das seções
+
+| # | Seção | Conteúdo |
+|---|---|---|
+| 01 | **Sobre** | O que é o projeto, os três serviços, por que este portal existe |
+| 02 | **Cidades participantes** | 11 municípios com quilometragem e **filtro por região** |
+| 03 | **Informações técnicas** | 4 abas: serviços · traçado e trechos · obras e drenagem · energia |
+| 04 | **Andamento** | Linha do tempo de 2013 a 2054, com 2026 destacado |
+
+---
+
+## 🧩 Recursos de JavaScript
+
+Todos sem dependências externas (~5,6 KB):
+
+- **Menu móvel** — colapsa abaixo de 820 px
+- **Abas** — em "Informações técnicas", sem recarga
+- **Filtro de cidades** — por região (11 = 4 capital + 3 aglomeração + 4 RMS)
+- **Contadores animados** — numbers que contam ao entrar na viewport
+- **Scroll-spy** — destaca o link da seção atual
+- **Revelação no scroll** — `IntersectionObserver` com `threshold` baixo
+
+### Acessibilidade
+
+- Marcação semântica (`header`, `nav`, `main`, `section`, `footer`)
+- Link "pular para o conteúdo"
+- `aria-*` nos controles (menu, abas, chips)
+- Respeita `prefers-reduced-motion`
+- **Guarda `.js`** — sem JavaScript, **todo o conteúdo fica visível** (sem tela em branco)
+
+---
+
+## 🖼️ Imagens
+
+| Arquivo | Origem |
 |---|---|
-| **Astro** | Site Mostly-estático, ótimo em Markdown, SEO-friendly, deploy grátis no GitHub Pages |
-| **Next.js** | Se houver necessidade de SSR, API routes ou áreas autenticadas |
-| **MkDocs / Docusaurus** | Se o foco for documentação técnica, sem identidade visual própria |
-| **Hugo** | Máximo desempenho e simplicidade, sem runtime JS |
+| `hero-trem-intercidades.jpg` | PPI-SP (Estado de São Paulo) |
+| `infraestrutura-existente.jpg` | PPI-SP (Estado de São Paulo) |
+| `mapa-tracado.png` | **Gerada neste repositório** a partir dos CADs do edital |
 
-Requisitos transversais:
+⚠️ **Antes de publicar publicamente, leia [`CREDITOS-IMAGENS.md`](CREDITOS-IMAGENS.md).** As duas fotografias vêm de
+portais oficiais, mas isso não garante domínio público — pode haver direitos de autor de terceiros.
 
-- 🇧🇷 Interface em **português**
-- 📱 **responsivo** (acesso majoritariamente por celular)
-- ♿ **acessibilidade** (WCAG) — é um repositório de transparência
-- 🔎 **SEO** para busca por "TIC Eixo Norte", "Trem Intercidades", "trem Campinas"
-- 📄 **estático**, para ser hospedável sem custo e sem servidor próprio
+---
+
+## 🔗 De onde vêm os números
+
+Todos os dados quantitativos vêm de:
+
+| Dado | Fonte no repositório |
+|---|---|
+| Extensão, prazos, valores, datas | `../Dados Públicos/01` a `04` (edital, contrato, DOE) |
+| Cidades e km de cada estação | `../Dados Públicos/10 - Dados Estruturados/ativos_por_km.csv` |
+| Trechos e estacas | `../Dados Públicos/10 - Dados Estruturados/trechos_e_estacas.csv` |
+| Obras de arte, drenagem, subestações | `../Dados Públicos/10 - Dados Estruturados/*.csv` + CADs do Anexo II |
+
+> Atualizar os CSVs é atualizar o site. É esse o objetivo do bloco [`../Agentes/`](../Agentes/).
+
+---
+
+## 🎨 Identidade visual
+
+Inspirado no modelo [Nigeria Railway Corporation Redesign](https://dribbble.com/shots/25011221-Nigeria-Railway-Corporation-Redesign)
+(Dribbble, de Stanley Chidubem) — **apenas como referência de estilo**, sem copiar a imagem.
+
+| Token | Valor | Uso |
+|---|---|---|
+| `--verde-800` | `#0d3b2e` | primário, títulos, botões |
+| `--verde-600` | `#1a6b4f` | destaques |
+| `--sage-100` | `#e4ece7` | seções alternadas, fundo do hero |
+| `--ambar` | `#f0b429` | acento (olho, ano atual, destaques) |
+| `--display` | Archivo 900 | títulos em caixa alta |
+| `--texto` | Inter 400–700 | corpo |
+
+Tipografia via [Google Fonts](https://fonts.google.com/), com fallback de sistema caso a rede falhe.
 
 ---
 
 ## 📋 Próximos passos
 
-- [ ] Definir a stack
-- [ ] Mapear os dados estruturados para os formatos de exibição (mapa, timeline, tabelas)
-- [ ] Criar a linha do tempo do projeto a partir de `04 - Publicações Oficiais`
-- [ ] Publicar o mapa do traçado com as estações e obras de arte
-- [ ] Configurar publicação automática (GitHub Pages / Vercel / Cloudflare)
+- [ ] Definir domínio e hospedagem (GitHub Pages na raiz do repositório)
+- [ ] **Resolver a questão de direitos das fotos** (ou trocá-las por imagens livres)
+- [ ] Gerar a linha do tempo automaticamente a partir de `04 - Publicações Oficiais`
+- [ ] Adicionar mapa interativo substituindo a imagem estática
+- [ ] Conectar os CSVs para gerar as tabelas em vez de escrevê-las à mão
+- [ ] Traduzir para inglês / espanhol
+- [ ] Medir acessibilidade com Lighthouse
 
 ---
 
-Ver também: [`../README.md`](../README.md) · [`../Agentes/README.md`](../Agentes/README.md)
+Ver também: [`../README.md`](../README.md) · [`../Agentes/README.md`](../Agentes/README.md) · [`../Dados Públicos/`](../Dados%20P%C3%BAblicos/)
