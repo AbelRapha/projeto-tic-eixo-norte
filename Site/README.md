@@ -31,22 +31,29 @@ python -m http.server 8000
 
 ---
 
-## ⚠️ Os links para documentos e onde hospedar
+## 🔗 Links para os documentos
 
-Os botões que levam aos documentos públicos usam caminho relativo para fora da pasta `Site/`:
+Todos os botões que levam aos documentos públicos usam **URL absoluta do GitHub**:
 
+```html
+https://github.com/AbelRapha/projeto-tic-eixo-norte/tree/main/Dados%20P%C3%BAblicos
 ```
-../Dados%20Públicos/01%20-%20Edital%20e%20Minutas/
-```
 
-Isso **funciona** em dois cenários:
+**Vantagem:** funcionam em **qualquer** hospedagem — GitHub Pages, Vercel, Cloudflare Pages, um servidor próprio ou mesmo abrindo o HTML direto do disco. Sem depender de onde o site foi publicado.
 
-✅ Abrindo `Site/index.html` direto do disco (`file://`)
-✅ Publicando **o repositório inteiro** — GitHub Pages, Vercel, Cloudflare Pages
+| Link | Destino |
+|---|---|
+| Ver documentos públicos | `Dados Públicos/` (10 pastas) |
+| Explorar os dados estruturados | `10 - Dados Estruturados/` (6 arquivos) |
+| Abrir o desenho completo | `06 - Plantas do Projeto (CAD)/00 - Consolidado/` |
+| Rodapé: Edital e minutas | `01 - Edital e Minutas/` (6 arquivos) |
+| Rodapé: Anexos técnicos | `02 - Anexos/` (43 arquivos) |
+| Rodapé: Contrato e aditivos | `03 - Contrato e Termos Aditivos/` (7 arquivos) |
+| Rodapé: Publicações no DOE | `04 - Publicações Oficiais/` (18 arquivos) |
 
-…e **não funciona** se apenas a pasta `Site/` for publicada sozinha.
+Todos abrem em nova aba (`target="_blank"`) com `rel="noopener"`, e **foram verificados como HTTP 200** e confirmados pela API do GitHub.
 
-> 💡 **Recomendação:** ao publicar, use a **raiz do repositório** como pasta do site e aponte para `/Site/`.
+> ⚠️ **Se você renomear ou mover as pastas**, é preciso atualizar essas URLs — elas contêm o nome das pastas.
 
 ---
 
