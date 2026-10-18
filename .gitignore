@@ -1,0 +1,17 @@
+# Arquivos temporarios do Microsoft Office
+~$*
+
+# Arquivos de sistema do Windows
+Thumbs.db
+desktop.ini
+
+# Arquivos temporarios e backups
+*.tmp
+*.bak
+~*.docx
+~*.xlsx
+~*.pptx
+
+# Pastas de ferramentas / editores
+.vscode/
+.idea/
