@@ -95,7 +95,6 @@ Todos sem dependências externas (~5,6 KB):
 |---|---|
 | `hero-trem-intercidades.jpg` | PPI-SP (Estado de São Paulo) |
 | `infraestrutura-existente.jpg` | PPI-SP (Estado de São Paulo) |
-| `mapa-tracado.png` | **Gerada neste repositório** a partir dos CADs do edital |
 
 ⚠️ **Antes de publicar publicamente, leia [`CREDITOS-IMAGENS.md`](CREDITOS-IMAGENS.md).** As duas fotografias vêm de
 portais oficiais, mas isso não garante domínio público — pode haver direitos de autor de terceiros.

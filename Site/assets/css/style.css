@@ -296,7 +296,7 @@ p:last-child{margin-bottom:0}
 .tag-rmc{background:rgba(26,107,79,.12);color:var(--verde-600)}
 
 .mapa-wrap{margin:44px 0 0;background:var(--branco);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sombra)}
-.mapa-wrap img{width:100%;background:#11161c;padding:10px}
+.mapa-wrap img{width:100%;height:auto;background:#eef4f1}
 .mapa-wrap figcaption{padding:18px 24px;font-size:.89rem;color:var(--tinta-60)}
 .mapa-wrap figcaption a{font-weight:700;text-decoration:none;border-bottom:2px solid var(--ambar)}
 
@@ -446,3 +446,36 @@ p:last-child{margin-bottom:0}
   html{scroll-behavior:auto}
   .js .reveal{opacity:1;transform:none}
 }
+
+.legenda-mapa{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:10px 26px;
+  margin:0;
+  padding:22px 24px;
+  list-style:none;
+  background:#f4f8f6;
+  border:1px solid #dde7e2;
+  border-radius:14px;
+  font-size:.86rem;
+  color:#0f1a16;
+}
+.legenda-mapa li{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  line-height:1.35;
+}
+.marca{
+  flex:0 0 auto;
+  width:14px;
+  height:14px;
+  border-radius:50%;
+}
+.marca-eixo{background:#0d3b2e;}
+.marca-terminal{background:#f0b429;box-shadow:0 0 0 3px #fde9b4;}
+.marca-tim{background:#b5179e;}
+.marca-linha7{background:#0891b2;}
+.marca-sub{background:#fff;border:2px solid #1a6b4f;border-radius:3px;}
+.marca-oae{background:#fff;border:2px solid #f0b429;}
+.marca-km{background:#0f1a16;border-radius:1px;width:16px;height:3px;}

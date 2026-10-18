@@ -31,34 +31,14 @@ Elas são reproduzidas aqui para fins informativos, junto de um projeto de trans
 
 ---
 
-## `mapa-tracado.png`
+## `assets/img/mapa-tracado.svg` — mapa do traçado
 
-| | |
-|---|---|
-| **Conteúdo** | Planta do traçado completo São Paulo → Campinas, com eixo, estacas, terminais, obras de arte e drenagem |
-| **Origem** | **Produzida neste repositório** |
-| **Como** | Gerada a partir dos 43 arquivos CAD do edital usando o CADCraft + Python (veja [`../Dados Públicos/06 - Plantas do Projeto (CAD)/00 - Consolidado/`](../Dados%20P%C3%BAblicos/06%20-%20Plantas%20do%20Projeto%20(CAD)/00%20-%20Consolidado/)) |
-| **Licença** | Derivada de documentos públicos do Estado de São Paulo |
+**Autoria:** produzido para este repositório, a partir dos dados extraídos das
+plantas do edital (eixo, estacas, estações, subestações e obras de arte).
+Nenhuma imagem de terceiros foi usada.
 
----
+**Licença:** mesma do repositório (CC BY 4.0).
 
-## ⚠️ Aviso sobre direitos de uso
-
-As duas fotografias vêm de portais oficiais do **Governo do Estado de São Paulo**. Isso **não significa automaticamente** que estejam em domínio público: fotografias de imprensa e imagens de acervo podem ter direitos de autor de terceiros (fotógrafos, agencias).
-
-**Antes de publicar este site publicamente, verifique:**
-
-1. Se as imagens são de **autoria da própria HSP** — nesse caso, cite a fonte conforme a política de uso de conteúdo do órgão;
-2. Se são de **terceiros** — nesse caso, é preciso **autorização** ou substituir por imagens com licença livre (ex.: Wikimedia Commons, Unsplash, Pexels);
-3. Se há exigência de **crédito fotográfico** específico — e incluí-lo.
-
-> 💡 **Sugestão prática:** se a licença não estiver clara, substitua as duas fotografias por imagens de **licença livre** — o layout funciona igual, e o `alt` text já está escrito e descreve bem cada imagem.
-
----
-
-## Referência de design (NÃO incluída no site)
-
-O layout foi inspirado no modelo
-[Nigeria Railway Corporation Redesign, no Dribbble](https://dribbble.com/shots/25011221-Nigeria-Railway-Corporation-Redesign),
-de Stanley Chidubem. A imagem de referência **não** foi copiada nem incluída neste projeto — serviu apenas como
-inspiração de estilo (cards arredondados, plano diagonal, display condensado em caixa alta, acento âmbar).
+> O antigo `assets/img/mapa-tracado.png` (renderização do CAD) foi removido: com
+> linhas de 1 px ele ficava ilegível ao ser reduzido para a largura da tela. A
+> versão em SVG é vetorial, nítida em qualquer tamanho e pesa menos.
