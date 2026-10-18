@@ -17,6 +17,7 @@ O objetivo é **estruturar os dados presentes em anexos e contratos públicos** 
 - [Objetivos do repositório](#-objetivos-do-repositório)
 - [Como usar](#-como-usar)
 - [Dados estruturados e georreferenciamento](#-dados-estruturados-e-georreferenciamento)
+- [Análise econômica](#-análise-econômica)
 - [Evolução do escopo — por que comparar edital e contrato importa](#-evolução-do-escopo--por-que-comparar-edital-e-contrato-importa)
 - [Como contribuir](#-como-contribuir)
 - [Fontes oficiais](#-fontes-oficiais)
@@ -95,7 +96,7 @@ Projeto TIC Eixo Norte/
 ├── 04 - Publicações Oficiais ......... 18 arquivos
 ├── 05 - Audiência Pública ............. 4 arquivos
 ├── 06 - Plantas do projeto (CAD) ...... 43 arquivos DWG
-├── 07 - Análise Econômica ............. 1 arquivo
+├── 07 - Análise Econômica ............. 1 arquivo (63 páginas)
 └── Dados Estruturados ................. 3 planilhas + guia
                                   Total: 78 documentos
 ```
@@ -109,7 +110,7 @@ Projeto TIC Eixo Norte/
 | **`05 - Audiência Pública`** | Apresentação da audiência de 16/08/2021 · contribuições recebidas · regulamento (português) · *Regulation Public Hearing* (inglês) |
 | **`Dados Estruturados`** | Planilhas CSV extraídas automaticamente dos PDFs, organizando os empreendimentos e obrigações por **quilometragem** ao longo dos 104 km da concessão · ver [`LEIA-ME.md`](Dados%20Estruturados/LEIA-ME.md) |
 | **`06 - Plantas do projeto (CAD)`** | **43 arquivos AutoCAD (.dwg)** do projeto conceitual, organizados em **5 temas**: topografia e base geográfica · geometria e articulação do traçado · mosaicos por trecho · elementos de projeto · imagens e fotos aéreas · ver [`README.md`](06%20-%20Plantas%20do%20projeto%20(CAD)/README.md) |
-| **`07 - Análise Econômica`** | Estudo de viabilidade econômico-financeira apresentado na audiência pública |
+| **`07 - Análise Econômica`** | **Relatório Financeiro Final — Análise de Viabilidade Econômico-Financeira** do projeto TIC Eixo Norte (63 pág., ago/2021) · ver [Análise econômica](#-análise-econômica) |
 
 > 💡 Os **nomes dos arquivos foram integralmente preservados** — os documentos apenas foram reorganizados em pastas. Assim, qualquer referência em pesquisa, relatório ou notícia continua casando com o nome original.
 
@@ -131,6 +132,7 @@ Projeto TIC Eixo Norte/
 - **Leitura rápida:** comece pelos arquivos de `05 - Audiência Pública` e pelo edital em `01 - Edital e Minutas`.
 - **Entender a infraestrutura e o investimento:** consulte `02 - Anexos` → Anexo I (infraestrutura), Anexo II (engenharia e material rodante) e Anexo IV (meio ambiente e social).
 - **Entender o compromisso firmado:** vá a `03 - Contrato e Termos Aditivos`. Os **Termos Aditivos (TAM 01/2024 e TAM 02/2025)** evidenciam o que mudou em relação ao contrato original.
+- **Entender a economia do projeto:** consulte `07 - Análise Econômica` para acessar as premissas do modelo financeiro que deu origem aos valores do edital.
 - **Acompanhar as decisões do poder concedente:** use `04 - Publicações Oficiais`, pois as atas do **CGPPP** e do **CDPED** registram as reuniões deliberativas do Estado.
 - **Para pesquisas e jornalismo:** cruzar `04 - Publicações Oficiais` com `03 - Contrato e Termos Aditivos` é a forma mais direta de comparar compromissos assumidos e entregas realizadas.
 
@@ -167,6 +169,31 @@ A pasta [`06 - Plantas do projeto (CAD)/`](06%20-%20Plantas%20do%20projeto%20(CA
 Arquivos DWG **podem carregar o sistema de coordenadas na própria definição do desenho**. Abrindo um deles no AutoCAD ou no QCAD e consultando `GEOGRAPHICPIN` ou as propriedades do *World UCS*, é possível descobrir se há SIRGAS 2000 (fuso 23 S) e, portanto, **destravar a conversão de quilometragem para latitude/longitude**.
 
 👉 **Se você fazer essa verificação, documente no [`README.md` da pasta 06](06%20-%20Plantas%20do%20projeto%20(CAD)/README.md)** — é o passo que falta para este repositório ter uma camada geográfica de verdade.
+
+---
+
+## 💰 Análise econômica
+
+A pasta [`07 - Análise Econômica/`](07%20-%20Análise%20Econ%C3%B4mica/) contém o **Relatório Financeiro Final — Análise de Viabilidade Econômico-Financeira** do projeto TIC Eixo Norte (63 páginas, agosto de 2021).
+
+### Sobre o documento
+
+| Item | Dado |
+|---|---|
+| Título | *Estruturação do Projeto TIC Eixo Norte — Relatório Financeiro Final* |
+| Produto | **E6 — Financeiro: Análise de Viabilidade Econômico-Financeira** |
+| Data | Agosto de 2021 (mesma data da audiência pública, 16/08/2021) |
+| Contratante | **Banco Interamericano de Desenvolvimento (BID)** — *Framework Agreement* **RG-T2998-P00**, *Task Order* **RG-T2998-P00I-T005** |
+| Finalidade | Estruturação e modelagem da PPP do TIC Eixo Norte |
+
+### Por que este documento importa
+
+- É a **base técnica do modelo econômico-financeário** que sustenta os valores de investimento, contraprestação e aporte público da concessão;
+- Foi produzido no âmbito da **cooperação técnica com o BID**, que apoiaram a estruturação do projeto desde 2019 — contexto que explica a rastreabilidade do processo;
+- Permite **conferir as premissas do modelo** (demanda, prazo, tarifas, investments) contra os números que aparecem no edital e no contrato;
+- É a referência para comparar **o que foi projetado em 2021** com **o que foi efetivamente contratado em 2024** — especialmente após os Termos Aditivos de 2024 e 2025.
+
+> 💡 Ao comparar este relatório com o contrato assinado e com os TAMs, é possível identificar **quais premissas mudaram** e o impacto de cada mudança.
 
 ---
 
