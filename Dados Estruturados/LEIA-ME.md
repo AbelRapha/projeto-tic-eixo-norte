@@ -121,7 +121,57 @@ Onde ficam as estações, pátios, subestações, bases e obras de arte.
 | 100,660 | Cabine | Cabine de seccionamento de Samambaia |
 | 106,460 | Subestação | Subestação de Campinas (8 MW) |
 
-### 3. `intervencoes_poder_concedente.csv` — 26 linhas
+### 3. `interferencias_desenho.csv` — 1.855 linhas
+
+Inventário das **interferências com redes de serviços públicos e obras civis** ao longo do traçado, extraído da camada temática do arquivo
+`04 - Elementos de projeto/ACAD-Trecho Total_TIC_INTERFERENCIAS.dwg` (1.903 entidades no total).
+
+| coluna | descrição |
+|---|---|
+| `id` | Identificador sequencial |
+| `camada` | Camada de origem no DWG (ex.: `DUTOS_SABESP`, `DUTOS_ELETROPAULO`) |
+| `tipo_entidade` | `LWPOLYLINE`, `Circle`, `Arc`, `Text`, `2D Solid`… |
+| `eh_rotulo` | `sim` para textos, `nao` para geometria |
+| `concessionaria` | Classificação derivada: SABESP · Eletropaulo · CPFL · CTEEP · Enel/Rede Elétrica · Transmissão · Telefônica · Comgás · Elekeiroz · Intelig/IQARA/Impsat/Global Crossing |
+| `tipo_interferencia` | `Subterranea` ou `Aerea` |
+| `descricao` | Texto do rótulo no desenho (ex.: `INTERCEPTOR SABESP`, `TRAVESSIA DE LINHAS DE ALTA TENSÃO - CPFL`) |
+| `km` / `km_m` / `estaca` / `trecho` | Posição na ferrovia, obtida via `calibracao_estacas_desenho.csv` |
+| `dist_estaca_m` | Distância da entidade até a estaca calibrada mais próxima |
+| `confianca_km` | `alta` (< 300 m) · `media` (< 2.000 m) · `baixa` |
+| `x_desenho_m` / `y_desenho_m` | Centroid da entidade, **no sistema local do desenho** |
+| `x_min` / `x_max` / `y_min` / `y_max` | Extremos da entidade, para desenhar o traçado |
+| `sistema_coordenadas` | Sempre `SISTEMA LOCAL DO PROJETO (nao georreferenciado)` |
+
+> ⚠️ **As coordenadas são do sistema local do desenho, não geográficas** — ver a seção
+> [🔎 E o que descobrimos nos arquivos CAD](#-e-o-que-descobrimos-nos-arquivos-cad).
+> O que é confiável é a coluna `km`, que usa a mesma calibração do Anexo I.2.
+> A confiança é **alta** para 1.011 entidades, **média** para 74 e **baixa** para 457
+> (linhas de transmissão e cabos que cruzam o eixo a longa distância — vínculo
+> com a estaca é aproximado).
+
+**Distribuição por concessionária (geometria, 1.542 entidades):**
+
+| Concessionária | Entidades |
+|---|---|
+| SABESP | 989 |
+| Enel / Rede Elétrica | 156 |
+| Eletropaulo | 133 |
+| Telefônica | 106 |
+| Transmissão | 93 |
+| Intelig / IQARA / Impsat / Global Crossing | 46 |
+| Comgás | 11 |
+| Não classificado | 8 |
+
+**Mapas prontos** em [`../06 - Plantas do projeto (CAD)/Mapas de interferencias/`](../06%20-%20Plantas%20do%20projeto%20(CAD)/Mapas%20de%20interferencias/):
+
+| Arquivo | Conteúdo |
+|---|---|
+| `01` a `06` | Planta por concessionária, com o traçado do TIC e os rótulos |
+| `07_Todas_as_interferencias` | Planta com todas as redes sobrepostas |
+| `10_Distribuicao_por_km_e_concessionaria` | Dispersão das interferências ao longo dos 104 km |
+| `11_Densidade_interferencias_por_km` | Mapa de calor por quilômetro e concessionária |
+
+### 4. `intervencoes_poder_concedente.csv` — 26 linhas
 
 As **26 intervenções de infraestrutura sob responsabilidade do Poder Concedente** (Linha 7–Rubi da CPTM), cada uma com sua faixa quilométrica — estas são as obras que o Estado executa e cobra da concessionária.
 
@@ -182,12 +232,18 @@ A extração é **automática e reprodutível** (sem digitação manual), feita 
 
 Cada linha registra o **documento e a página exata**, permitindo conferir cada dado no PDF original. As colunas `trecho`, `km_m` e `tipo` foram **derivadas** por regras internas, a partir das faixas de estaca do Anexo I.2.
 
+O `interferencias_desenho.csv` tem origem diferente: é extraído do **binário CAD**, não de PDF. O arquivo `ACAD-Trecho Total_TIC_INTERFERENCIAS.dwg` é convertido para DXF e percorrido entidade a entidade; a concessionária e o tipo (aérea/subterrânea) são classificados pelo **nome da camada** e pelo **texto do rótulo**; a quilometragem vem da proximidade à polilinha de estacas de `calibracao_estacas_desenho.csv`.
+
 ### Limitações conhecidas
 
 - A coluna `km` usa o **zero declarado nos documentos** (km 0), e não o zero físico da via;
 - Nomes foram extraídos de legendas de figura e podem estar **abreviados** frente à nomenclatura oficial completa;
 - O Anexo I.1 traz estações da Linha 7 que não aparecem aqui por não terem quilometragem declarada;
-- Um PDF do repositório (`Anexo III.C – Apenso 1 – Convênio PAESE 2016`) é **inteiramente escaneado** (sem camada de texto) e não pôde ser analisado automaticamente.
+- Um PDF do repositório (`Anexo III.C – Apenso 1 – Convênio PAESE 2016`) é **inteiramente escaneado** (sem camada de texto) e não pôde ser analisado automaticamente;
+- **Interferências**: a calibração cobre apenas o km 21,800–106,700, então o trecho central compartilhado (km 0–2,640) e o intervalo 2,640–21,800 recebem o `km` da estaca mais próxima extrapolada e devem ser tratados como aproximados;
+- **Interferências**: 457 entidades (30%) têm `confianca_km` **baixa** — linhas de transmissão e cabos que cruzam o eixo ferroviário a kilometers de distância; o `km` indica onde o traçado passaria, não onde a rede está;
+- **Interferências**: a geometria no CSV é **simplificada** (centro e extremos da entidade), não o traçado vetorial completo — use os `.dwg` para medir;
+- 61 entidades degeneradas (camada `0`, `defpoints`, linhas de definição) foram descartadas por estarem fora da área do desenho.
 
 ---
 

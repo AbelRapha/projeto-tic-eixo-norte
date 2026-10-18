@@ -17,6 +17,7 @@ O objetivo é **estruturar os dados presentes em anexos e contratos públicos** 
 - [Objetivos do repositório](#-objetivos-do-repositório)
 - [Como usar](#-como-usar)
 - [Dados estruturados e georreferenciamento](#-dados-estruturados-e-georreferenciamento)
+- [Interferências urbanas](#-interferências-urbanas)
 - [Análise econômica](#-análise-econômica)
 - [Evolução do escopo — por que comparar edital e contrato importa](#-evolução-do-escopo--por-que-comparar-edital-e-contrato-importa)
 - [Como contribuir](#-como-contribuir)
@@ -95,9 +96,9 @@ Projeto TIC Eixo Norte/
 ├── 03 - Contrato e Termos Aditivos .... 7 arquivos
 ├── 04 - Publicações Oficiais ......... 18 arquivos
 ├── 05 - Audiência Pública ............. 4 arquivos
-├── 06 - Plantas do projeto (CAD) ...... 43 arquivos DWG
+├── 06 - Plantas do projeto (CAD) ...... 43 arquivos DWG + mapas
 ├── 07 - Análise Econômica ............. 1 arquivo (63 páginas)
-└── Dados Estruturados ................. 3 planilhas + guia
+└── Dados Estruturados ................. 5 planilhas + guia
                                   Total: 78 documentos
 ```
 
@@ -108,8 +109,8 @@ Projeto TIC Eixo Norte/
 | **`03 - Contrato e Termos Aditivos`** | Contrato assinado · **TAM nº 01/2024** · **TAM nº 02/2025** · anexos do TAM 02/2025 (projeto conceitual, cronograma, áreas, licenciamento ambiental) |
 | **`04 - Publicações Oficiais`** | Publicações no **DOE/SP** — decretos, avisos de licitação, consulta/audiência pública, resultado, homologação, extrato do TAM · atas do CGPPP e do CDPED, de 2013 a 2025 |
 | **`05 - Audiência Pública`** | Apresentação da audiência de 16/08/2021 · contribuições recebidas · regulamento (português) · *Regulation Public Hearing* (inglês) |
-| **`Dados Estruturados`** | Planilhas CSV extraídas automaticamente dos PDFs, organizando os empreendimentos e obrigações por **quilometragem** ao longo dos 104 km da concessão · ver [`LEIA-ME.md`](Dados%20Estruturados/LEIA-ME.md) |
-| **`06 - Plantas do projeto (CAD)`** | **43 arquivos AutoCAD (.dwg)** organizados em **5 temas** (topografia e base geográfica · geometria e articulação do traçado · mosaicos por trecho · elementos de projeto · imagens e fotos aéreas) **+ `00 - Consolidado`**, um desenho único do traçado São Paulo → Campinas com **16 camadas filtráveis** · ver [`README.md`](06%20-%20Plantas%20do%20projeto%20(CAD)/README.md) |
+| **`Dados Estruturados`** | Planilhas CSV extraídas automaticamente dos PDFs, organizando os empreendimentos e obrigações por **quilometragem** ao longo dos 104 km da concessão · mais o inventário das **interferências urbanas**, extraído do CAD · ver [`LEIA-ME.md`](Dados%20Estruturados/LEIA-ME.md) |
+| **`06 - Plantas do projeto (CAD)`** | **43 arquivos AutoCAD (.dwg)** organizados em **5 temas** (topografia e base geográfica · geometria e articulação do traçado · mosaicos por trecho · elementos de projeto · imagens e fotos aéreas) **+ `00 - Consolidado`**, um desenho único do traçado São Paulo → Campinas com **16 camadas filtráveis**, **+ `Mapas de interferencias`**, com 9 mapas derivados · ver [`README.md`](06%20-%20Plantas%20do%20projeto%20(CAD)/README.md) |
 | **`07 - Análise Econômica`** | **Relatório Financeiro Final — Análise de Viabilidade Econômico-Financeira** do projeto TIC Eixo Norte (63 pág., ago/2021) · ver [Análise econômica](#-análise-econômica) |
 
 > 💡 Os **nomes dos arquivos foram integralmente preservados** — os documentos apenas foram reorganizados em pastas. Assim, qualquer referência em pesquisa, relatório ou notícia continua casando com o nome original.
@@ -123,7 +124,8 @@ Projeto TIC Eixo Norte/
 3. **Educação e cidadania** — ofertar aos **cidadãos interessados no assunto** um ponto de partida estruturado para entender o que está sendo concedido, por quanto tempo, com quais obrigações e a que custo;
 4. **Base para análise** — permitir a comparação direta entre períodos (edital → contrato → Termos Aditivos) para identificar **evoluções de escopo, cronograma e investimento**;
 5. **Memória documental** — preservar, de forma versionada e referenciada, a linha do tempo completa da concessão, do edital de 2021 aos aditivos de 2024–2025;
-6. **Estruturação de dados** — converter PDFs em dados consultáveis (planilhas CSV com quilometragem de cada empreendimento e intervenção), permitindo análise, filtragem e cruzamento que os documentos impressos não permitem.
+6. **Estruturação de dados** — converter PDFs em dados consultáveis (planilhas CSV com quilometragem de cada empreendimento e intervenção), permitindo análise, filtragem e cruzamento que os documentos impressos não permitem;
+7. **Mapeamento das interferências urbanas** — inventariar as redes de saneamento, energia, gás, telefonia e fibra óptica que cruzam o traçado, tornando visível um item de **risco contratual** que os PDFs descrevem apenas em cláusulas.
 
 ---
 
@@ -134,6 +136,7 @@ Projeto TIC Eixo Norte/
 - **Entender o compromisso firmado:** vá a `03 - Contrato e Termos Aditivos`. Os **Termos Aditivos (TAM 01/2024 e TAM 02/2025)** evidenciam o que mudou em relação ao contrato original.
 - **Entender a economia do projeto:** consulte `07 - Análise Econômica` para acessar as premissas do modelo financeiro que deu origem aos valores do edital.
 - **Acompanhar as decisões do poder concedente:** use `04 - Publicações Oficiais`, pois as atas do **CGPPP** e do **CDPED** registram as reuniões deliberativas do Estado.
+- **Saber quais redes de serviço a ferrovia vai encontrar ou desviar:** vá para [Interferências urbanas](#-interferências-urbanas) — o inventário por concessionária, os mapas e as cláusulas do contrato que definem quem paga por cada remanejamento.
 - **Para pesquisas e jornalismo:** cruzar `04 - Publicações Oficiais` com `03 - Contrato e Termos Aditivos` é a forma mais direta de comparar compromissos assumidos e entregas realizadas.
 
 ---
@@ -148,6 +151,9 @@ A pasta [`Dados Estruturados/`](Dados%20Estruturados/) traz planilhas CSV gerada
 | `ativos_por_km.csv` | 27 | Onde ficam estações, pátios, subestações, bases, cabines e obras de arte |
 | `intervencoes_poder_concedente.csv` | 26 | As obras sob responsabilidade do Poder Concedente, cada uma com sua faixa de km |
 | `calibracao_estacas_desenho.csv` | 180 | 180 estacas com a coordenada do desenho (sistema **local**, não georreferenciado) |
+| `interferencias_desenho.csv` | 1.855 | **Interferências urbanas** — redes de saneamento, energia, gás, telefonia e fibra óptica ao longo do traçado, com concessionária e km |
+
+> As três primeiras planilhas vêm dos **PDFs**; as duas últimas, do **CAD**. Todas convergem para a mesma referência linear de **quilometragem**, o que permite cruzá-las entre si.
 
 ### ⚠️ Importante: referência linear, **não** coordenadas geográficas
 
@@ -183,6 +189,45 @@ O erro é pequeno nas pontas do traçado e grande no meio — padrão de **disto
 ❌ O que **não** é: converter essas coordenadas em latitude/longitude — o desvio chegaria a 17 km.
 
 👉 **O desenho consolidado**: [`00 - Consolidado/README.md`](06%20-%20Plantas%20do%20projeto%20(CAD)/00%20-%20Consolidado/README.md) — como filtrar cada tema no AutoCAD.
+
+---
+
+## 🚧 Interferências urbanas
+
+O arquivo `ACAD-Trecho Total_TIC_INTERFERENCIAS.dwg` é **o mais rico do projeto para o tema das interferências urbanas**: são as redes de serviço público e de infraestrutura que a ferrovia encontra — ou tem de desviar — ao longo dos 104 km.
+
+O inventário foi extraído para [`interferencias_desenho.csv`](Dados%20Estruturados/interferencias_desenho.csv) — **1.542 entidades de geometria**, com 313 rótulos que identificam nominalmente cada rede:
+
+| Concessionária | Entidades | O que aparece nos rótulos |
+|---|---|---|
+| **SABESP** | 989 | adutora, interceptor (inclusive o **Criciúma**), rede coletora de esgoto, galeria de águas pluviais, drenagem, estação elevatória, tratamento de esgoto, água preta (SPOBRAS) |
+| **Enel / Rede Elétrica** | 156 | rede de alta tensão, travessias aéreas e subterrâneas |
+| **Eletropaulo** | 133 | rede de distribuição, tubo elétrico em duto corrugado, rede CESP |
+| **Telefônica** | 106 | cabos telefônicos, dutos, fiação TELESP |
+| **Transmissão** | 93 | linhas de transmissão e postes |
+| **Intelig / IQARA / Impsat / Global Crossing** | 46 | cabos de fibra óptica e derivações de rede |
+| **Comgás / Elekeiroz** | 11 | dutos de gás natural |
+
+Como o DWG usa sistema local, a posição na ferrovia foi obtida pela **calibração com as 180 estacas** — e não por coordenada geográfica. A qualidade do vínculo está sinalizada em `confianca_km`: **alta** para 1.011 entidades, **média** para 74 e **baixa** para 457 (linhas de transmissão que cruzam o eixo a quilômetros de distância).
+
+### Por que isso importa
+
+As interferências não são apenas um detalhe de projeto — são **risco contratual com preço**. No contrato assinado:
+
+| Cláusula | Disposição |
+|---|---|
+| **38.1.69** | A concessionária repara, **às suas expensas**, danos em água, esgoto, eletricidade, gás e telecomunicações, e realiza a **remoção das interferências**, ocultas ou aparentes |
+| **38.1.110** | Obrigação de obter cadastros de interferências junto aos responsáveis |
+| **44.1.40** | Custos e atrasos por interferências com **fibra óptica, dutos de água e esgoto, dutos de gases, dutos de petróleo e linhas de transmissão** são risco da **concessionária**, se constarem do Anexo I Parte 2 ou de cadastros públicos das prefeituras e concessionárias |
+| **44.9** | Cria a categoria de risco compartilhado: **"interferências não indicadas"** — as que não estavam nos documentos de referência |
+
+Ou seja: **interferência não mapeada é risco financeiro da concessionária**, e o mapeamento é justamente o que separa uma da outra.
+
+O **Anexo III.C** registra, na íntegra, o cadastro de **travessias já solicitadas e deferidas** — com concessionária, número de processo, local e custo em R$: Eletropaulo em Pirituba/Piqueri (R$ 7.111,65), o assentamento do interceptor Criciúma em Caieiras (R$ 3.314,48), seis travessias subterrâneas da SABESP entre Francisco Morato e Botujuru (R$ 6.742 a R$ 12.072), e obras de emergência do DER em Campo Limpo Paulista e da Prefeitura de São Paulo na galeria do córrego Sumaré.
+
+### Mapas
+
+Nove mapas derivados estão em [`06 - Plantas do projeto (CAD)/Mapas de interferencias/`](06%20-%20Plantas%20do%20projeto%20(CAD)/Mapas%20de%20interferencias/): plantas por concessionária, o traçado completo sobreposto, a dispersão ao longo dos 104 km e um mapa de calor de densidade por quilômetro.
 
 ---
 
