@@ -29,7 +29,7 @@ O padrão de erro — **pequeno nas extremidades (Campinas 0,3 km; Barra Funda 2
 
 ### Consequência prática
 
-- ✅ **A relação quilometragem ↔ coordenada do desenho é confiável e internamente consistente** — 180 estacas de calibração foram extraídas (ver `../Dados Estruturados/calibracao_estacas_desenho.csv`)
+- ✅ **A relação quilometragem ↔ coordenada do desenho é confiável e internamente consistente** — 180 estacas de calibração foram extraídas (ver `../../10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Estruturados/calibracao_estacas_desenho.csv`)
 - ❌ **Não converta essas coordenadas em latitude/longitude** — o erro chegaria a 17 km
 - Para posição geográfica real, é necessário obter o projeto georreferenciado oficial (solicitação via **Lei de Acesso à Informação** à SPI e à Artesp)
 

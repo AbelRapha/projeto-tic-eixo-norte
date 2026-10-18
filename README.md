@@ -90,20 +90,32 @@ Com base no edital, no contrato e nas comunicações do Governo do Estado de Sã
 
 ```
 Projeto TIC Eixo Norte/
-├── .gitignore
 ├── README.md
-├── 01 - Edital e Minutas .............. 6 arquivos
-├── 02 - Anexos ....................... 43 arquivos
-├── 03 - Contrato e Termos Aditivos .... 7 arquivos
-├── 04 - Publicações Oficiais ......... 18 arquivos
-├── 05 - Audiência Pública ............. 4 arquivos
-├── 06 - Plantas do projeto (CAD) ...... 43 arquivos DWG + mapas
-├── 07 - Análise Econômica ............. 1 arquivo (63 páginas)
-├── 08 - Portais de transparência ..... documentos municipais por município
-├── 09 - Informações Artesp ........... documentos do órgão regulador
-└── Dados Estruturados ................. 5 planilhas + guia
-                                  Total: 78 documentos
+├── .gitignore
+│
+├── Dados Públicos/ .............................. acervo oficial + dados derivados
+│   ├── 01 - Edital e Minutas .................. 6 arquivos
+│   ├── 02 - Anexos ........................... 43 arquivos
+│   ├── 03 - Contrato e Termos Aditivos ........ 7 arquivos
+│   ├── 04 - Publicações Oficiais .............. 18 arquivos
+│   ├── 05 - Audiência Pública ................. 4 arquivos
+│   ├── 06 - Plantas do Projeto (CAD) .......... 43 DWGs + 1 mapa
+│   ├── 07 - Análise Econômica ................. 1 arquivo
+│   ├── 08 - Portais de Transparência dos Municípios
+│   ├── 09 - Artesp ........................... 5 arquivos
+│   └── 10 - Dados Estruturados ............... 5 planilhas CSV + guia
+│
+├── Site/  ...................................... site do projeto (em construção)
+└── Agentes/  ................................... agentes de IA para coleta de dados (em construção)
 ```
+
+Os três blocos têm finalidades distintas:
+
+| Bloco | Finalidade |
+|---|---|
+| 📁 **`Dados Públicos/`** | Acervo documental oficial e os dados derivados dele — a fonte da verdade |
+| 🌐 **[`Site/`](Site/README.md)** | Site de acesso público para cidadãos interessados — em construção |
+| 🤖 **[`Agentes/`](Agentes/README.md)** | Agentes de IA que coletam novos dados dos portais oficiais — em construção |
 
 | Pasta | Conteúdo |
 |---|---|
@@ -112,11 +124,11 @@ Projeto TIC Eixo Norte/
 | **`03 - Contrato e Termos Aditivos`** | Contrato assinado · **TAM nº 01/2024** · **TAM nº 02/2025** · anexos do TAM 02/2025 (projeto conceitual, cronograma, áreas, licenciamento ambiental) |
 | **`04 - Publicações Oficiais`** | Publicações no **DOE/SP** — decretos, avisos de licitação, consulta/audiência pública, resultado, homologação, extrato do TAM · atas do CGPPP e do CDPED, de 2013 a 2025 |
 | **`05 - Audiência Pública`** | Apresentação da audiência de 16/08/2021 · contribuições recebidas · regulamento (português) · *Regulation Public Hearing* (inglês) |
-| **`Dados Estruturados`** | Planilhas CSV extraídas automaticamente dos PDFs, organizando os empreendimentos e obrigações por **quilometragem** ao longo dos 104 km da concessão · mais o inventário das **interferências urbanas**, extraído do CAD · ver [`LEIA-ME.md`](Dados%20Estruturados/LEIA-ME.md) |
-| **`06 - Plantas do projeto (CAD)`** | **43 arquivos AutoCAD (.dwg)** organizados em **5 temas** (topografia e base geográfica · geometria e articulação do traçado · mosaicos por trecho · elementos de projeto · imagens e fotos aéreas) **+ `00 - Consolidado`**, um desenho único do traçado São Paulo → Campinas com **16 camadas filtráveis**, **+ `Mapas de interferencias`**, com 9 mapas derivados · ver [`README.md`](06%20-%20Plantas%20do%20projeto%20(CAD)/README.md) |
+| **`Dados Estruturados`** | Planilhas CSV extraídas automaticamente dos PDFs, organizando os empreendimentos e obrigações por **quilometragem** ao longo dos 104 km da concessão · mais o inventário das **interferências urbanas**, extraído do CAD · ver [`LEIA-ME.md`](Dados%20P%C3%BAblicos/10%20-%20Dados%20Estruturados/LEIA-ME.md) |
+| **`06 - Plantas do projeto (CAD)`** | **43 arquivos AutoCAD (.dwg)** organizados em **5 temas** (topografia e base geográfica · geometria e articulação do traçado · mosaicos por trecho · elementos de projeto · imagens e fotos aéreas) **+ `00 - Consolidado`**, um desenho único do traçado São Paulo → Campinas com **16 camadas filtráveis**, **+ `Mapas de interferencias`**, com 9 mapas derivados · ver [`README.md`](Dados%20P%C3%BAblicos/06%20-%20Plantas%20do%20Projeto%20%28CAD%29/README.md) |
 | **`07 - Análise Econômica`** | **Relatório Financeiro Final — Análise de Viabilidade Econômico-Financeira** do projeto TIC Eixo Norte (63 pág., ago/2021) · ver [Análise econômica](#-análise-econômica) |
-| **`08 - Portais de transparência`** | Atos **ambientais e urbanísticos emitidos pelos municípios** ao longo do traçado, organizados por prefeitura — complementares ao Anexo IV, que trata do enquadramento estadual · ver [`README.md`](08%20-%20Informa%C3%A7%C3%B5es%20dos%20portais%20de%20transpar%C3%AAncia%20dos%20munic%C3%ADpios/README.md) |
-| **`09 - Informações Artesp`** | Documentos baixados do portal da **Artesp**, o órgão regulador — incluindo a **versão legível do TAM 01/2024** · ver [`README.md`](09%20-%20Informa%C3%A7%C3%B5es%20Artesp/README.md) |
+| **`08 - Portais de transparência`** | Atos **ambientais e urbanísticos emitidos pelos municípios** ao longo do traçado, organizados por prefeitura — complementares ao Anexo IV, que trata do enquadramento estadual · ver [`README.md`](Dados%20P%C3%BAblicos/08%20-%20Portais%20de%20Transpar%C3%AAncia%20dos%20Munic%C3%ADpios/README.md) |
+| **`09 - Informações Artesp`** | Documentos baixados do portal da **Artesp**, o órgão regulador — incluindo a **versão legível do TAM 01/2024** · ver [`README.md`](Dados%20P%C3%BAblicos/09%20-%20Artesp/README.md) |
 
 > 💡 Os **nomes dos arquivos foram integralmente preservados** — os documentos apenas foram reorganizados em pastas. Assim, qualquer referência em pesquisa, relatório ou notícia continua casando com o nome original.
 
@@ -149,7 +161,7 @@ Projeto TIC Eixo Norte/
 
 ## 📍 Dados estruturados e georreferenciamento
 
-A pasta [`Dados Estruturados/`](Dados%20Estruturados/) traz planilhas CSV geradas **automaticamente** a partir da camada de texto dos PDFs, com a página exata de origem em cada linha:
+A pasta [`Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Estruturados/`](Dados%20P%C3%BAblicos/10%20-%20Dados%20Estruturados/) traz planilhas CSV geradas **automaticamente** a partir da camada de texto dos PDFs, com a página exata de origem em cada linha:
 
 | Planilha | Linhas | Conteúdo |
 |---|---|---|
@@ -177,7 +189,7 @@ Como a quilometragem é **relativa** e o datum nunca é declarado nos documentos
 
 ### 💡 Mas há uma pista: os arquivos CAD
 
-A pasta [`06 - Plantas do projeto (CAD)/`](06%20-%20Plantas%20do%20projeto%20(CAD)/) contém **43 arquivos AutoCAD (.dwg)** e agora inclui um **desenho consolidado do traçado completo** — São Paulo → Campinas, com 16 camadas filtráveis.
+A pasta [`Dados Públicos/06 - Plantas do Projeto (CAD)/`](Dados%20P%C3%BAblicos/06%20-%20Plantas%20do%20Projeto%20%28CAD%29/) contém **43 arquivos AutoCAD (.dwg)** e agora inclui um **desenho consolidado do traçado completo** — São Paulo → Campinas, com 16 camadas filtráveis.
 
 **Sobre as coordenadas dos DWGs:** eles têm coordenadas, e elas **não são geográficas**.
 
@@ -190,11 +202,11 @@ A pasta [`06 - Plantas do projeto (CAD)/`](06%20-%20Plantas%20do%20projeto%20(CA
 
 O erro é pequeno nas pontas do traçado e grande no meio — padrão de **distorção não rígida**, próprio de **sistema local de engenharia**, e não de datum geodésico.
 
-✅ O que **é** confiável: a relação **quilometragem ↔ coordenada do desenho**, calibrada por 180 pontos de controle e publicada em [`calibracao_estacas_desenho.csv`](Dados%20Estruturados/calibracao_estacas_desenho.csv).
+✅ O que **é** confiável: a relação **quilometragem ↔ coordenada do desenho**, calibrada por 180 pontos de controle e publicada em [`calibracao_estacas_desenho.csv`](Dados%20P%C3%BAblicos/10%20-%20Dados%20Estruturados/calibracao_estacas_desenho.csv).
 
 ❌ O que **não** é: converter essas coordenadas em latitude/longitude — o desvio chegaria a 17 km.
 
-👉 **O desenho consolidado**: [`00 - Consolidado/README.md`](06%20-%20Plantas%20do%20projeto%20(CAD)/00%20-%20Consolidado/README.md) — como filtrar cada tema no AutoCAD.
+👉 **O desenho consolidado**: [`00 - Consolidado/README.md`](Dados%20P%C3%BAblicos/06%20-%20Plantas%20do%20Projeto%20%28CAD%29/00%20-%20Consolidado/README.md) — como filtrar cada tema no AutoCAD.
 
 ---
 
@@ -202,7 +214,7 @@ O erro é pequeno nas pontas do traçado e grande no meio — padrão de **disto
 
 O arquivo `ACAD-Trecho Total_TIC_INTERFERENCIAS.dwg` é **o mais rico do projeto para o tema das interferências urbanas**: são as redes de serviço público e de infraestrutura que a ferrovia encontra — ou tem de desviar — ao longo dos 104 km.
 
-O inventário foi extraído para [`interferencias_desenho.csv`](Dados%20Estruturados/interferencias_desenho.csv) — **1.542 entidades de geometria**, com 313 rótulos que identificam nominalmente cada rede:
+O inventário foi extraído para [`interferencias_desenho.csv`](Dados%20P%C3%BAblicos/10%20-%20Dados%20Estruturados/interferencias_desenho.csv) — **1.542 entidades de geometria**, com 313 rótulos que identificam nominalmente cada rede:
 
 | Concessionária | Entidades | O que aparece nos rótulos |
 |---|---|---|
@@ -233,7 +245,7 @@ O **Anexo III.C** registra, na íntegra, o cadastro de **travessias já solicita
 
 ### Mapas
 
-Nove mapas derivados estão em [`06 - Plantas do projeto (CAD)/Mapas de interferencias/`](06%20-%20Plantas%20do%20projeto%20(CAD)/Mapas%20de%20interferencias/): plantas por concessionária, o traçado completo sobreposto, a dispersão ao longo dos 104 km e um mapa de calor de densidade por quilômetro.
+Nove mapas derivados estão em [`Dados Públicos/06 - Plantas do Projeto (CAD)/06 - Mapas de interferências/`](Dados%20P%C3%BAblicos/06%20-%20Plantas%20do%20Projeto%20%28CAD%29/06%20-%20Mapas%20de%20interfer%C3%AAncias/): plantas por concessionária, o traçado completo sobreposto, a dispersão ao longo dos 104 km e um mapa de calor de densidade por quilômetro.
 
 ---
 
@@ -241,7 +253,7 @@ Nove mapas derivados estão em [`06 - Plantas do projeto (CAD)/Mapas de interfer
 
 O **Anexo IV** do edital trata do licenciamento no **âmbito estadual** (CETESB). Mas a obra ainda atravessa o **aparato municipal** — e são esses atos, publicados nos portais de transparência das prefeituras, que registram o que foi **aprovado, condicionado ou recusado** em cada cidade.
 
-A pasta [`08 - Portais de transparência`](08%20-%20Informa%C3%A7%C3%B5es%20dos%20portais%20de%20transpar%C3%AAncia%20dos%20munic%C3%ADpios/) organiza esses documentos **por município**.
+A pasta [`08 - Portais de transparência`](Dados%20P%C3%BAblicos/08%20-%20Portais%20de%20Transpar%C3%AAncia%20dos%20Munic%C3%ADpios/) organiza esses documentos **por município**.
 
 ### O caso de Vinhedo — 6 documentos
 
@@ -262,7 +274,7 @@ Todos os atos se referem ao **Trecho 3, `km 62+720` ao `km 106+700`** — o segm
 
 ## 💰 Análise econômica
 
-A pasta [`07 - Análise Econômica/`](07%20-%20Análise%20Econ%C3%B4mica/) contém o **Relatório Financeiro Final — Análise de Viabilidade Econômico-Financeira** do projeto TIC Eixo Norte (63 páginas, agosto de 2021).
+A pasta [`Dados Públicos/Dados%20P%C3%BAblicos/07%20-%20An%C3%A1lise%20Econ%C3%B4mica/`](Dados%20P%C3%BAblicos/07%20-%20An%C3%A1lise%20Econ%C3%B4mica/) contém o **Relatório Financeiro Final — Análise de Viabilidade Econômico-Financeira** do projeto TIC Eixo Norte (63 páginas, agosto de 2021).
 
 ### Sobre o documento
 

@@ -45,7 +45,7 @@ Isso é relevante porque o repositório registra que o **datum nunca é declarad
 
 ⚠️ **Mas a declaração não se confirma em campo.** A malha plotada (`E 300.250–300.750 · N 7.446.250–7.447.000`), lida como UTM 23S, cai perto de **longitude −45,3° / latitude −22,6°** — ou seja, no interior de São Paulo, a centenas de quilômetros de Campinas (que fica em −47,06° / −22,91°). A passagem de fauna, por sua vez, traz `X=227.650 · Y=404.600`, que é claramente o **sistema local do desenho**.
 
-👉 Conclusão: **o rótulo SIRGAS 2000 está no documento, mas os números plotados continuam em sistema local.** Tratar as coordenadas com a mesma cautela já registrada no [`LEIA-ME.md`](../../Dados%20Estruturados/LEIA-ME.md).
+👉 Conclusão: **o rótulo SIRGAS 2000 está no documento, mas os números plotados continuam em sistema local.** Tratar as coordenadas com a mesma cautela já registrada no [`LEIA-ME.md`](../10%20-%20Dados%20Estruturados/LEIA-ME.md).
 
 ---
 
@@ -57,7 +57,7 @@ Isso é relevante porque o repositório registra que o **datum nunca é declarad
 | Escopo previsto para o **EIA** | `../../02 - Anexos/ANEXO IV.D-ESCOPO PROPOSTO EIA_TIC Eixo Norte.pdf` |
 | Licenças ambientais do edital | `../../02 - Anexos/ANEXO IV.C- LICENÇAS AMBIENTAIS_TIC.pdf` |
 | Riscos de desastres naturais | `../../02 - Anexos/ANEXO IV.G - RISCOS DESATRES NATURAIS_TIC.pdf` |
-| Trechos e estacas dos km citados | `../../Dados Estruturados/trechos_e_estacas.csv` |
+| Trechos e estacas dos km citados | `../../../10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Estruturados/trechos_e_estacas.csv` |
 
 ---
 

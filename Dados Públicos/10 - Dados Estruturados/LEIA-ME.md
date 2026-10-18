@@ -28,7 +28,7 @@ Além disso, a quilometragem é **relativa**: o km 0 não está vinculado a nenh
 
 ### 🔎 E o que descobrimos nos arquivos CAD
 
-Os **43 arquivos DWG** da pasta [`../06 - Plantas do projeto (CAD)/`](../06%20-%20Plantas%20do%20projeto%20(CAD)/) **têm coordenadas**, e elas **não são geográficas**:
+Os **43 arquivos DWG** da pasta [`../../06 - Plantas do Projeto (CAD)/`](../06%20-%20Plantas%20do%20Projeto%20%28CAD%29/) **têm coordenadas**, e elas **não são geográficas**:
 
 | Verificação | Resultado |
 |---|---|
@@ -162,7 +162,7 @@ Inventário das **interferências com redes de serviços públicos e obras civis
 | Comgás | 11 |
 | Não classificado | 8 |
 
-**Mapas prontos** em [`../06 - Plantas do projeto (CAD)/Mapas de interferencias/`](../06%20-%20Plantas%20do%20projeto%20(CAD)/Mapas%20de%20interferencias/):
+**Mapas prontos** em [`../../06 - Plantas do Projeto (CAD)/06 - Mapas de interferências/`](../06%20-%20Plantas%20do%20Projeto%20%28CAD%29/06%20-%20Mapas%20de%20interfer%C3%AAncias/):
 
 | Arquivo | Conteúdo |
 |---|---|

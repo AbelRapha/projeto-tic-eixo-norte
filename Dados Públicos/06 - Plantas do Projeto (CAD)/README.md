@@ -57,7 +57,7 @@ A **geometria do projeto**: articulação do traçado e plantas por trecho, com 
 | `VII-TRECHO LOUVEIRA-VALINHOS...Rev06 08.02.2021.dwg` | Louveira – Valinhos | 81+740 a 98+660 |
 | `VIII-TRECHO VALINHOS-CAMPINAS...Rev06 08.02.2021.dwg` | Valinhos – Campinas | 98+660 a 106+700 |
 
-> 💡 Esta pasta é a **fonte primária da referência linear** usada nas planilhas de [`../Dados Estruturados/`](../Dados%20Estruturados/). As estacas aqui listadas (2+235, 21+800, 44+120, 60+800, 81+740, 98+660, 106+700) correspondem exatamente aos valores consolidados em `trechos_e_estacas.csv`.
+> 💡 Esta pasta é a **fonte primária da referência linear** usada nas planilhas de [`../../10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Estruturados/`](../10%20-%20Dados%20Estruturados/). As estacas aqui listadas (2+235, 21+800, 44+120, 60+800, 81+740, 98+660, 106+700) correspondem exatamente aos valores consolidados em `trechos_e_estacas.csv`.
 
 ### `03 - Mosaicos por trecho (Apenso)` — 6 arquivos
 
@@ -91,9 +91,9 @@ Camadas temáticas do traçado completo (todas com prefixo `TIC_`).
 > 1.903 entidades em 18 camadas temáticas (`DUTOS_SABESP`, `DUTOS_ELETROPAULO`,
 > `DUTOS_LINHAS DE ALTA TENSÃO`, `DUTO_CABO ÓPTICO`, `DUTOS_TRAVESSIA_COMGÁS`…),
 > com rótulos que identificam nominalmente cada rede. Foi convertido para
-> [`interferencias_desenho.csv`](../Dados%20Estruturados/interferencias_desenho.csv),
+> [`interferencias_desenho.csv`](../10%20-%20Dados%20Estruturados/interferencias_desenho.csv),
 > que traz concessionária, tipo (aérea/subterrânea), descrição e quilometragem.
-> Mapas por concessionária em [`Mapas de interferencias/`](Mapas%20de%20interferencias/).
+> Mapas por concessionária em [`Dados Públicos/06 - Plantas do Projeto (CAD)/06 - Mapas de interferências/`](06%20-%20Mapas%20de%20interfer%C3%AAncias/).
 | `ACAD-Trecho Total_TIC_Elementos.dwg` | **Elementos** do traçado |
 
 ### `Mapas de interferencias` — 9 PNGs
@@ -133,10 +133,10 @@ Pranchas de imagens aéreas/imagens de satélite com as fotos removidas (`SEM FO
 |---|---|
 | Normas e especificações técnicas | `../02 - Anexos/` (Anexo II.B — Via Permanente) |
 | Perfis e traçado em texto | `../02 - Anexos/ANEXO I.2-AREAS` |
-| Localização de estações e subestações em tabela | `../Dados Estruturados/ativos_por_km.csv` |
-| Localização das obras do Poder Concedente | `../Dados Estruturados/intervencoes_poder_concedente.csv` |
-| **Interferências com redes existentes** | `../Dados Estruturados/interferencias_desenho.csv` |
-| Mapas de interferências por concessionária | `./Mapas de interferencias/` |
+| Localização de estações e subestações em tabela | `../../10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Estruturados/ativos_por_km.csv` |
+| Localização das obras do Poder Concedente | `../../10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Estruturados/intervencoes_poder_concedente.csv` |
+| **Interferências com redes existentes** | `../../10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Estruturados/interferencias_desenho.csv` |
+| Mapas de interferências por concessionária | `./Dados Públicos/06 - Plantas do Projeto (CAD)/06 - Mapas de interferências/` |
 
 ---
 
@@ -205,10 +205,10 @@ Conclusão: os arquivos usam um **sistema local de engenharia**, não um datum g
 
 👉 **O que isso permite e o que não permite:**
 
-- ✅ Usar a relação **quilometragem ↔ coordenada do desenho** (é internamente consistente — 180 pontos de controle estão em `../Dados Estruturados/calibracao_estacas_desenho.csv`);
+- ✅ Usar a relação **quilometragem ↔ coordenada do desenho** (é internamente consistente — 180 pontos de controle estão em `../../10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Estruturados/calibracao_estacas_desenho.csv`);
 - ❌ **Não converter** essas coordenadas em latitude/longitude — o erro chegaria a 17 km.
 
-Para obter o projeto **georreferenciado de verdade**, é preciso solicitar os dados oficiais (ver [`../Dados Estruturados/LEIA-ME.md`](../Dados%20Estruturados/LEIA-ME.md)).
+Para obter o projeto **georreferenciado de verdade**, é preciso solicitar os dados oficiais (ver [`../../10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Públicos/10 - Dados Estruturados/LEIA-ME.md`](../10%20-%20Dados%20Estruturados/LEIA-ME.md)).
 
 ---
 
