@@ -16,6 +16,7 @@ O objetivo é **estruturar os dados presentes em anexos e contratos públicos** 
 - [Estrutura do repositório](#-estrutura-do-repositório)
 - [Objetivos do repositório](#-objetivos-do-repositório)
 - [Como usar](#-como-usar)
+- [Dados estruturados e georreferenciamento](#-dados-estruturados-e-georreferenciamento)
 - [Evolução do escopo — por que comparar edital e contrato importa](#-evolução-do-escopo--por-que-comparar-edital-e-contrato-importa)
 - [Como contribuir](#-como-contribuir)
 - [Fontes oficiais](#-fontes-oficiais)
@@ -92,8 +93,9 @@ Projeto TIC Eixo Norte/
 ├── 02 - Anexos ....................... 43 arquivos
 ├── 03 - Contrato e Termos Aditivos .... 7 arquivos
 ├── 04 - Publicações Oficiais ......... 18 arquivos
-└── 05 - Audiência Pública ............. 4 arquivos
-                                     Total: 78
+├── 05 - Audiência Pública ............. 4 arquivos
+└── Dados Estruturados ................. 3 planilhas + guia
+                                  Total: 78 documentos
 ```
 
 | Pasta | Conteúdo |
@@ -103,6 +105,7 @@ Projeto TIC Eixo Norte/
 | **`03 - Contrato e Termos Aditivos`** | Contrato assinado · **TAM nº 01/2024** · **TAM nº 02/2025** · anexos do TAM 02/2025 (projeto conceitual, cronograma, áreas, licenciamento ambiental) |
 | **`04 - Publicações Oficiais`** | Publicações no **DOE/SP** — decretos, avisos de licitação, consulta/audiência pública, resultado, homologação, extrato do TAM · atas do CGPPP e do CDPED, de 2013 a 2025 |
 | **`05 - Audiência Pública`** | Apresentação da audiência de 16/08/2021 · contribuições recebidas · regulamento (português) · *Regulation Public Hearing* (inglês) |
+| **`Dados Estruturados`** | Planilhas CSV extraídas automaticamente dos PDFs, organizando os empreendimentos e obrigações por **quilometragem** ao longo dos 104 km da concessão · ver [`LEIA-ME.md`](Dados%20Estruturados/LEIA-ME.md) |
 
 > 💡 Os **nomes dos arquivos foram integralmente preservados** — os documentos apenas foram reorganizados em pastas. Assim, qualquer referência em pesquisa, relatório ou notícia continua casando com o nome original.
 
@@ -114,7 +117,8 @@ Projeto TIC Eixo Norte/
 2. **Transparência** — centralizar em um só lugar documentos oficiais que hoje ficam espalhados entre páginas de diferentes órgãos (PPI-SP, Artesp, DOE), facilitando a conferência e o acompanhamento;
 3. **Educação e cidadania** — ofertar aos **cidadãos interessados no assunto** um ponto de partida estruturado para entender o que está sendo concedido, por quanto tempo, com quais obrigações e a que custo;
 4. **Base para análise** — permitir a comparação direta entre períodos (edital → contrato → Termos Aditivos) para identificar **evoluções de escopo, cronograma e investimento**;
-5. **Memória documental** — preservar, de forma versionada e referenciada, a linha do tempo completa da concessão, do edital de 2021 aos aditivos de 2024–2025.
+5. **Memória documental** — preservar, de forma versionada e referenciada, a linha do tempo completa da concessão, do edital de 2021 aos aditivos de 2024–2025;
+6. **Estruturação de dados** — converter PDFs em dados consultáveis (planilhas CSV com quilometragem de cada empreendimento e intervenção), permitindo análise, filtragem e cruzamento que os documentos impressos não permitem.
 
 ---
 
@@ -125,6 +129,32 @@ Projeto TIC Eixo Norte/
 - **Entender o compromisso firmado:** vá a `03 - Contrato e Termos Aditivos`. Os **Termos Aditivos (TAM 01/2024 e TAM 02/2025)** evidenciam o que mudou em relação ao contrato original.
 - **Acompanhar as decisões do poder concedente:** use `04 - Publicações Oficiais`, pois as atas do **CGPPP** e do **CDPED** registram as reuniões deliberativas do Estado.
 - **Para pesquisas e jornalismo:** cruzar `04 - Publicações Oficiais` com `03 - Contrato e Termos Aditivos` é a forma mais direta de comparar compromissos assumidos e entregas realizadas.
+
+---
+
+## 📍 Dados estruturados e georreferenciamento
+
+A pasta [`Dados Estruturados/`](Dados%20Estruturados/) traz planilhas CSV geradas **automaticamente** a partir da camada de texto dos PDFs, com a página exata de origem em cada linha:
+
+| Planilha | Linhas | Conteúdo |
+|---|---|---|
+| `trechos_e_estacas.csv` | 6 | A divisão oficial da concessão, com estacas e extensões (total **104,060 km**) |
+| `ativos_por_km.csv` | 27 | Onde ficam estações, pátios, subestações, bases, cabines e obras de arte |
+| `intervencoes_poder_concedente.csv` | 26 | As obras sob responsabilidade do Poder Concedente, cada uma com sua faixa de km |
+
+### ⚠️ Importante: referência linear, **não** coordenadas geográficas
+
+Uma varredura completa dos 78 PDFs (3.884 páginas) confirmou que **não há coordenadas geográficas estruturadas** neste repositório — nenhum PDF GeoPDF, nenhum arquivo `.shp`/`.kml`/`.dwg` anexado, nenhuma tabela de latitude/longitude, nenhum código EPSG ou SIRGAS 2000.
+
+O que os documentos oferecem é a **referência linear por quilometragem (chainage)** — que é justamente o sistema usado no projeto:
+
+- Trechos: `2+640` → `106+700`
+- Subestações: Tietê `km 10,512` · Jaraguá `km 19,186` · Caieiras `km 27,589` · Jundiaí `km 59,650` · Campinas `km 106,460`
+- Maior intervenção: Acesso ao Pátio de carga em Jundiaí, `km 55,500` a `km 59,400` (**3.900 m**)
+
+A **única** referência a coordenadas está no Anexo 1 do TAM 02-2025, que declara que elas foram definidas no arquivo `TIC_Agua_Branca_Conceitual_02` — **fornecido pela concessionária e não incluído aqui**.
+
+Como a quilometragem é **relativa** e o datum nunca é declarado nos documentos, converter `km 59,650` em latitude/longitude exigiria inventar uma referência — e não é isso que fazemos. No lugar, deixamos registrado no `LEIA-ME.md` **quais dados georreferenciados são exigidos contratualmente** e **como solicitá-los** (Lei de Acesso à Informação à SPI e à Artesp).
 
 ---
 

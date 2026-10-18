@@ -1,0 +1,28 @@
+﻿id;tipo;item;km;km_m;trecho;fonte;documento;pagina
+1;Pátio / Base;Base Operacional da Barra Funda;3,200;3200;Barra Funda – Perus;Anexo II.A – Memoriais descritivos;02 - Anexos/ANEXO II.A - ENGENHARIA - MEMORIAIS_TIC Eixo Norte.pdf;139
+2;Subestação;Subestação retificadora de Água Branca;5,600;5600;Barra Funda – Perus;Anexo II.C – Sinal, energia e telecom;02 - Anexos/ANEXO II.C - ENGENHARIA - SINAL.ENERGIA.TELEC_TIC.pdf;110
+3;Pátio / Base;Estação Lapa Unificada e o Pátio Lapa;8,500;8500;Barra Funda – Perus;Anexo II.A – Memoriais descritivos;02 - Anexos/ANEXO II.A - ENGENHARIA - MEMORIAIS_TIC Eixo Norte.pdf;140
+4;Estação;Estação Piqueri;9,600;9600;Barra Funda – Perus;Anexo II.A – Memoriais descritivos;02 - Anexos/ANEXO II.A - ENGENHARIA - MEMORIAIS_TIC Eixo Norte.pdf;103
+5;Pátio / Base;Estação Piqueri – Pátio de Manutenção Leve e Estacionamento do Expresso;9,600;9600;Barra Funda – Perus;Anexo II.A – Memoriais descritivos;02 - Anexos/ANEXO II.A - ENGENHARIA - MEMORIAIS_TIC Eixo Norte.pdf;144
+6;Subestação;Subestação Tietê;10,512;10512;Barra Funda – Perus;Anexo II.C – Sinal, energia e telecom;02 - Anexos/ANEXO II.C - ENGENHARIA - SINAL.ENERGIA.TELEC_TIC.pdf;85
+7;Pátio / Base;Estacionamento Pirituba;11,950;11950;Barra Funda – Perus;Anexo II.A – Memoriais descritivos;02 - Anexos/ANEXO II.A - ENGENHARIA - MEMORIAIS_TIC Eixo Norte.pdf;144
+8;Pátio / Base;Estacionamento Jaraguá;16,630;16630;Barra Funda – Perus;Anexo II.A – Memoriais descritivos;02 - Anexos/ANEXO II.A - ENGENHARIA - MEMORIAIS_TIC Eixo Norte.pdf;145
+9;Subestação;Subestação Jaraguá;19,186;19186;Barra Funda – Perus;Anexo II.C – Sinal, energia e telecom;02 - Anexos/ANEXO II.C - ENGENHARIA - SINAL.ENERGIA.TELEC_TIC.pdf;85
+10;Pátio / Base;Estacionamento Perus;22,500;22500;Perus – Botujuru;Anexo II.A – Memoriais descritivos;02 - Anexos/ANEXO II.A - ENGENHARIA - MEMORIAIS_TIC Eixo Norte.pdf;145
+11;Subestação;Subestação Caieiras;27,589;27589;Perus – Botujuru;Anexo II.C – Sinal, energia e telecom;02 - Anexos/ANEXO II.C - ENGENHARIA - SINAL.ENERGIA.TELEC_TIC.pdf;86
+12;Pátio / Base;Estacionamento Caieiras;38,000;38000;Perus – Botujuru;Anexo II.A – Memoriais descritivos;02 - Anexos/ANEXO II.A - ENGENHARIA - MEMORIAIS_TIC Eixo Norte.pdf;146
+13;Pátio / Base;Estacionamento e base de Manutenção de Francisco Morato;38,526;38526;Perus – Botujuru;Anexo II.A – Memoriais descritivos;02 - Anexos/ANEXO II.A - ENGENHARIA - MEMORIAIS_TIC Eixo Norte.pdf;146
+14;Subestação;Subestação Francisco Morato;38,526;38526;Perus – Botujuru;Anexo II.C – Sinal, energia e telecom;02 - Anexos/ANEXO II.C - ENGENHARIA - SINAL.ENERGIA.TELEC_TIC.pdf;86
+15;Pátio / Base;Estacionamento Campo Limpo Paulista;49,000;49000;Botujuru – Jundiaí;Anexo II.A – Memoriais descritivos;02 - Anexos/ANEXO II.A - ENGENHARIA - MEMORIAIS_TIC Eixo Norte.pdf;164
+16;Subestação;Subestação Campo Limpo;49,633;49633;Botujuru – Jundiaí;Anexo II.C – Sinal, energia e telecom;02 - Anexos/ANEXO II.C - ENGENHARIA - SINAL.ENERGIA.TELEC_TIC.pdf;86
+17;Subestação;Subestação Retificadora de JUNDIAÍ;59,650;59650;Botujuru – Jundiaí;Anexo II.A – Memoriais descritivos;02 - Anexos/ANEXO II.A - ENGENHARIA - MEMORIAIS_TIC Eixo Norte.pdf;172
+18;Cabine de seccionamento;Cabine de seccionamento de Corrupira;70,920;70920;Jundiaí – Louveira;Anexo II.C – Sinal, energia e telecom;02 - Anexos/ANEXO II.C - ENGENHARIA - SINAL.ENERGIA.TELEC_TIC.pdf;105
+19;Subestação;Subestação de Louveira - 8 MW;76,500;76500;Jundiaí – Louveira;Anexo II.C – Sinal, energia e telecom;02 - Anexos/ANEXO II.C - ENGENHARIA - SINAL.ENERGIA.TELEC_TIC.pdf;100
+20;Pátio / Base;Estacionamento Vinhedo;83,000;83000;Louveira – Valinhos;Anexo II.A – Memoriais descritivos;02 - Anexos/ANEXO II.A - ENGENHARIA - MEMORIAIS_TIC Eixo Norte.pdf;197
+21;Cabine de seccionamento;Cabine de seccionamento de Vinhedo;83,260;83260;Louveira – Valinhos;Anexo II.C – Sinal, energia e telecom;02 - Anexos/ANEXO II.C - ENGENHARIA - SINAL.ENERGIA.TELEC_TIC.pdf;106
+22;Pátio / Base;Estacionamento Valinhos;90,780;90780;Louveira – Valinhos;Anexo II.A – Memoriais descritivos;02 - Anexos/ANEXO II.A - ENGENHARIA - MEMORIAIS_TIC Eixo Norte.pdf;198
+23;Subestação;Subestação Valinhos 8 MW;91,450;91450;Louveira – Valinhos;Anexo II.C – Sinal, energia e telecom;02 - Anexos/ANEXO II.C - ENGENHARIA - SINAL.ENERGIA.TELEC_TIC.pdf;102
+24;Obra de arte;Acesso Terra-via de Valinhos;91,600;91600;Louveira – Valinhos;Anexo II.A – Memoriais descritivos;02 - Anexos/ANEXO II.A - ENGENHARIA - MEMORIAIS_TIC Eixo Norte.pdf;198
+25;Cabine de seccionamento;Cabine de seccionamento de Samambaia;100,660;100660;Valinhos – Campinas;Anexo II.C – Sinal, energia e telecom;02 - Anexos/ANEXO II.C - ENGENHARIA - SINAL.ENERGIA.TELEC_TIC.pdf;107
+26;Pátio / Base;Base de Manutenção Campinas;105,000;105000;Valinhos – Campinas;Anexo II.A – Memoriais descritivos;02 - Anexos/ANEXO II.A - ENGENHARIA - MEMORIAIS_TIC Eixo Norte.pdf;199
+27;Subestação;Subestação de Campinas 8 MW;106,460;106460;Valinhos – Campinas;Anexo II.C – Sinal, energia e telecom;02 - Anexos/ANEXO II.C - ENGENHARIA - SINAL.ENERGIA.TELEC_TIC.pdf;103

@@ -1,0 +1,27 @@
+﻿intervencao;descricao;km_inicial;km_final;km_inicial_m;km_final_m;extensao_m;trecho;documento_fonte
+1;Obras de capacitação das vias existentes para o tráfego do trem de carga da MRS na V1 e V2 da Linha 7;0,000;0,540;0;540;540;Trecho central compartilhado (até o km 2,640);02 - Anexos/ANEXO II.D
+2;Obras de puxamentos e a ligação da V1 atual com a V5 atual e da V2 atual com a V1 atual com a implantação de trilhos TR-68, dormentes de concreto monobloco, fixações, lastro e sublastro;0,540;0,850;540;850;310;Trecho central compartilhado (até o km 2,640);02 - Anexos/ANEXO II.D
+3;Obras de capacitação das vias existentes para o tráfego do trem de carga da MRS na V1, V2 e V5 atuais da Linha 7;0,850;2,330;850;2330;1480;Trecho central compartilhado (até o km 2,640);02 - Anexos/ANEXO II.D
+4;Obras de implantação da infraestrutura e superestrutura do prolongamento da V5 atual da Linha 7 até a plataforma 4 da estação da Barra Funda;2,330;3,460;2330;3460;1130;Barra Funda – Perus;02 - Anexos/ANEXO II.D
+5;Obras de capacitação das vias existentes para o tráfego do trem de carga da MRS na V1, V2 e V5 atuais da Linha 7;3,460;3,820;3460;3820;360;Barra Funda – Perus;02 - Anexos/ANEXO II.D
+6;Execução dos puxamentos das vias V1, V2 e V3 para a nova geometria com a implantação de trilhos TR-68, dormentes de concreto monobloco, fixações, lastro e sublastro;3,820;5,171;3820;5171;1351;Barra Funda – Perus;02 - Anexos/ANEXO II.D
+7;Remoção e relocação para a posição definitiva das vias V1 e V2 da Linha 7;5,171;5,800;5171;5800;629;Barra Funda – Perus;02 - Anexos/ANEXO II.D
+8;Estação Água Branca – Linha 7;5,800;6,150;5800;6150;350;Barra Funda – Perus;02 - Anexos/ANEXO II.D
+9;Vias V1 e V2 da Linha 7;6,150;7,450;6150;7450;1300;Barra Funda – Perus;02 - Anexos/ANEXO II.D
+10;Estação Lapa intermediária – Linha 7;7,450;7,700;7450;7700;250;Barra Funda – Perus;02 - Anexos/ANEXO II.D
+11;Relocação da infra e superestrutura das vias V1, V2 da Linha 7;7,700;8,966;7700;8966;1266;Barra Funda – Perus;02 - Anexos/ANEXO II.D
+12;Via V1 da Linha 7 na Ponte do Rio Tiete;8,966;9,277;8966;9277;311;Barra Funda – Perus;02 - Anexos/ANEXO II.D
+13;Pórticos abrangendo todas as Vias;9,277;9,500;9277;9500;223;Barra Funda – Perus;02 - Anexos/ANEXO II.D
+14;Estação Piqueri - Acessibilidade no Acesso Leste e V1 e V2. Acesso leste – Rua José Peres Campelo completamente acessível;9,500;10,000;9500;10000;500;Barra Funda – Perus;02 - Anexos/ANEXO II.D
+15;Trecho Piqueri - Pirituba Vi e V2 da Linha 7;10,000;11,348;10000;11348;1348;Barra Funda – Perus;02 - Anexos/ANEXO II.D
+16;Trecho Piqueri - Pirituba Vi e V2 da Linha 7;11,348;11,500;11348;11500;152;Barra Funda – Perus;02 - Anexos/ANEXO II.D
+17;Estação Vila Clarice - Acesso Leste: Acesso completo com passarela, escadas e elevador para a plataforma da Via 2;14,500;14,700;14500;14700;200;Barra Funda – Perus;02 - Anexos/ANEXO II.D
+18;Estação Jaraguá – Passarela na atual Passagem de Nível;16,300;16,800;16300;16800;500;Barra Funda – Perus;02 - Anexos/ANEXO II.D
+19;Estação Jaraguá Atual –Via V3 (Via V1 na nova Plataforma da Linha 7);16,800;18,700;16800;18700;1900;Barra Funda – Perus;02 - Anexos/ANEXO II.D
+20;Estação Perus – Extensão da Passarela Pública e Acessibilidade Oeste;22,700;22,800;22700;22800;100;Perus – Botujuru;02 - Anexos/ANEXO II.D
+21;Nova Estação Caieiras - Implantação – Construção das novas V1 e V2 da Linha 7 e Relocação dos Pilares do Viaduto;27,000;28,100;27000;28100;1100;Perus – Botujuru;02 - Anexos/ANEXO II.D
+22;Estação Baltazar Fidélis – Acessos e Sistema Viário Leste;34,800;35,100;34800;35100;300;Perus – Botujuru;02 - Anexos/ANEXO II.D
+23;Estação Botujuru – Acesso Leste (Túnel) e Transposição Superior entre Plataformas;45,300;45,550;45300;45550;250;Botujuru – Jundiaí;02 - Anexos/ANEXO II.D
+24;Estação Campo Limpo Paulista – Passarela Pública de Conexão dos Terminais Urbanos e Rodoviário e a Nova Estação;49,100;49,500;49100;49500;400;Botujuru – Jundiaí;02 - Anexos/ANEXO II.D
+25;Nova Estação Várzea Paulista;55,000;55,500;55000;55500;500;Botujuru – Jundiaí;02 - Anexos/ANEXO II.D
+26;Acesso ao Pátio de carga em Jundiaí;55,500;59,400;55500;59400;3900;Botujuru – Jundiaí;02 - Anexos/ANEXO II.D
