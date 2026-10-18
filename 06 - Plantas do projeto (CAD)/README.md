@@ -2,7 +2,18 @@
 
 Arquivos **AutoCAD (.dwg)** do projeto conceitual do Trem Intercidades — Eixo Norte, extraídos dos anexos técnicos do edital.
 
-São **43 arquivos DWG** organizados em **5 pastas temáticas**.
+São **43 arquivos DWG** organizados em **5 pastas temáticas**, mais uma pasta **`00 - Consolidado`** com o traçado completo unificado.
+
+| Pasta | Arquivos | Tema |
+|---|---|---|
+| **`00 - Consolidado`** | 4 | **🆕 Traçado completo São Paulo → Campinas** (DWG + PNG + PDF + relatório) |
+| `01 - Topografia e base geográfica` | 10 | Levantamentos topográficos e bases de referência |
+| `02 - Geometria e articulação do traçado` | 12 | Articulação e plantas por trecho |
+| `03 - Mosaicos por trecho (Apenso)` | 6 | Apensos 9 a 14 |
+| `04 - Elementos de projeto` | 9 | Estacas, OAE, passarelas, drenagem, desapropriação |
+| `05 - Imagens e fotos aéreas` | 6 | Pranchas `SEM FOTOS` |
+
+> 🎯 **Comece por [`00 - Consolidado/README.md`](00%20-%20Consolidado/README.md)** — lá está o desenho único com o eixo, terminais, estacas, obras de arte e drenagem, com **16 camadas filtráveis no AutoCAD**.
 
 > ⚠️ Arquivos binários: para visualizar, use **AutoCAD**, **LibreCAD**, **QCAD**, **DWG TrueView** (gratuito) ou conversores online.
 
@@ -103,17 +114,20 @@ Pranchas de imagens aéreas/imagens de satélite com as fotos removidas (`SEM FO
 
 ---
 
-## 📐 Sobre o datum nestas plantas
+## 📐 Sobre as coordenadas nestas plantas
 
-Os arquivos DWG **podem conter um sistema de coordenadas georreferenciado na definição do desenho** (no AutoCAD, via `UNITS` e `GEOGRAPHICPIN`). Como não foi possível abrir os arquivos no AutoCAD nesta conferência, **não é possível afirmar qual o datum aplicado**.
+Os DWGs usam **coordenadas projetadas** (faixa E 286.000–331.000 / N 7.390.000–7.470.000), com geometria equivalente a uma transcversa de Mercator de meridiano central **−45°** e fator de escala **0,9996** — ou seja, a mesma configuração do **UTM 23 Sul**.
 
-👉 Para descobrir: abra o arquivo no AutoCAD ou no QCAD e verifique:
+**Porém, elas não correspondem ao SIRGAS 2000 real.** Testando contra as posições geográficas conhecidas das estações, o erro é de **0,3 km (Campinas) a 17,8 km (Francisco Morato)**, com média de 8,4 km. Uma transformação rígida de 4 parâmetros (escala, rotação e translação) **não corrige** esse desvio.
 
-1. Comando `GEOGRAPHICPIN` → mostra latitude/longitude de um ponto;
-2. Botão direito no UCS World → **Properties** → mostra o sistema de coordenadas;
-3. Comando `LTSCALE` / `LIST` → mostra as coordenadas do ponto de origem.
+Conclusão: os arquivos usam um **sistema local de engenharia**, não um datum geodésico oficial.
 
-Se encontrar coordenadas SIRGAS 2000 (fuso 23 S), **documente aqui** — isso permite converter a quilometragem em latitude e longitude.
+👉 **O que isso permite e o que não permite:**
+
+- ✅ Usar a relação **quilometragem ↔ coordenada do desenho** (é internamente consistente — 180 pontos de controle estão em `../Dados Estruturados/calibracao_estacas_desenho.csv`);
+- ❌ **Não converter** essas coordenadas em latitude/longitude — o erro chegaria a 17 km.
+
+Para obter o projeto **georreferenciado de verdade**, é preciso solicitar os dados oficiais (ver [`../Dados Estruturados/LEIA-ME.md`](../Dados%20Estruturados/LEIA-ME.md)).
 
 ---
 

@@ -109,7 +109,7 @@ Projeto TIC Eixo Norte/
 | **`04 - Publicações Oficiais`** | Publicações no **DOE/SP** — decretos, avisos de licitação, consulta/audiência pública, resultado, homologação, extrato do TAM · atas do CGPPP e do CDPED, de 2013 a 2025 |
 | **`05 - Audiência Pública`** | Apresentação da audiência de 16/08/2021 · contribuições recebidas · regulamento (português) · *Regulation Public Hearing* (inglês) |
 | **`Dados Estruturados`** | Planilhas CSV extraídas automaticamente dos PDFs, organizando os empreendimentos e obrigações por **quilometragem** ao longo dos 104 km da concessão · ver [`LEIA-ME.md`](Dados%20Estruturados/LEIA-ME.md) |
-| **`06 - Plantas do projeto (CAD)`** | **43 arquivos AutoCAD (.dwg)** do projeto conceitual, organizados em **5 temas**: topografia e base geográfica · geometria e articulação do traçado · mosaicos por trecho · elementos de projeto · imagens e fotos aéreas · ver [`README.md`](06%20-%20Plantas%20do%20projeto%20(CAD)/README.md) |
+| **`06 - Plantas do projeto (CAD)`** | **43 arquivos AutoCAD (.dwg)** organizados em **5 temas** (topografia e base geográfica · geometria e articulação do traçado · mosaicos por trecho · elementos de projeto · imagens e fotos aéreas) **+ `00 - Consolidado`**, um desenho único do traçado São Paulo → Campinas com **16 camadas filtráveis** · ver [`README.md`](06%20-%20Plantas%20do%20projeto%20(CAD)/README.md) |
 | **`07 - Análise Econômica`** | **Relatório Financeiro Final — Análise de Viabilidade Econômico-Financeira** do projeto TIC Eixo Norte (63 pág., ago/2021) · ver [Análise econômica](#-análise-econômica) |
 
 > 💡 Os **nomes dos arquivos foram integralmente preservados** — os documentos apenas foram reorganizados em pastas. Assim, qualquer referência em pesquisa, relatório ou notícia continua casando com o nome original.
@@ -147,6 +147,7 @@ A pasta [`Dados Estruturados/`](Dados%20Estruturados/) traz planilhas CSV gerada
 | `trechos_e_estacas.csv` | 6 | A divisão oficial da concessão, com estacas e extensões (total **104,060 km**) |
 | `ativos_por_km.csv` | 27 | Onde ficam estações, pátios, subestações, bases, cabines e obras de arte |
 | `intervencoes_poder_concedente.csv` | 26 | As obras sob responsabilidade do Poder Concedente, cada uma com sua faixa de km |
+| `calibracao_estacas_desenho.csv` | 180 | 180 estacas com a coordenada do desenho (sistema **local**, não georreferenciado) |
 
 ### ⚠️ Importante: referência linear, **não** coordenadas geográficas
 
@@ -164,11 +165,24 @@ Como a quilometragem é **relativa** e o datum nunca é declarado nos documentos
 
 ### 💡 Mas há uma pista: os arquivos CAD
 
-A pasta [`06 - Plantas do projeto (CAD)/`](06%20-%20Plantas%20do%20projeto%20(CAD)/) contém **43 arquivos AutoCAD (.dwg)** do projeto conceitual — incluindo as bases de estações, limites municipais, faixa de domínio e a malha geral de estacas.
+A pasta [`06 - Plantas do projeto (CAD)/`](06%20-%20Plantas%20do%20projeto%20(CAD)/) contém **43 arquivos AutoCAD (.dwg)** e agora inclui um **desenho consolidado do traçado completo** — São Paulo → Campinas, com 16 camadas filtráveis.
 
-Arquivos DWG **podem carregar o sistema de coordenadas na própria definição do desenho**. Abrindo um deles no AutoCAD ou no QCAD e consultando `GEOGRAPHICPIN` ou as propriedades do *World UCS*, é possível descobrir se há SIRGAS 2000 (fuso 23 S) e, portanto, **destravar a conversão de quilometragem para latitude/longitude**.
+**Sobre as coordenadas dos DWGs:** eles têm coordenadas, e elas **não são geográficas**.
 
-👉 **Se você fazer essa verificação, documente no [`README.md` da pasta 06](06%20-%20Plantas%20do%20projeto%20(CAD)/README.md)** — é o passo que falta para este repositório ter uma camada geográfica de verdade.
+| Verificação | Resultado |
+|---|---|
+| Faixa | E 286.000–331.000 · N 7.390.000–7.470.000 |
+| Projeção que melhor explica | Transversa de Mercator, **meridiano central −45°**, k = 0,9996 (o mesmo do UTM 23S) |
+| **Erro contra posições reais** | **médio 8,4 km** · de 0,3 km (Campinas) a **17,8 km** (Francisco Morato) |
+| Correção por transformação rígida | **não corrige** |
+
+O erro é pequeno nas pontas do traçado e grande no meio — padrão de **distorção não rígida**, próprio de **sistema local de engenharia**, e não de datum geodésico.
+
+✅ O que **é** confiável: a relação **quilometragem ↔ coordenada do desenho**, calibrada por 180 pontos de controle e publicada em [`calibracao_estacas_desenho.csv`](Dados%20Estruturados/calibracao_estacas_desenho.csv).
+
+❌ O que **não** é: converter essas coordenadas em latitude/longitude — o desvio chegaria a 17 km.
+
+👉 **O desenho consolidado**: [`00 - Consolidado/README.md`](06%20-%20Plantas%20do%20projeto%20(CAD)/00%20-%20Consolidado/README.md) — como filtrar cada tema no AutoCAD.
 
 ---
 

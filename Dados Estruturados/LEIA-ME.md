@@ -24,13 +24,43 @@ A única referência a coordenadas está no **Anexo 1 — Projeto Conceitual (TA
 
 Ou seja: **as coordenadas existem, mas estão num arquivo de projeto fornecido pela concessionária, que não está neste repositório.**
 
-Além disso, a quilometragem é **relativa**: o km 0 não está vinculado a nenhum marco geodésico, e o datum (provavelmente SIRGAS 2000 / UTM zona 23 S, dado o contexto do Estado de São Paulo) **nunca é declarado** nos documentos. Por isso, converter `km 59,650` em latitude/longitude exigiria inventar um datum — não fazemos isso aqui.
+Além disso, a quilometragem é **relativa**: o km 0 não está vinculado a nenhum marco geodésico, e o datum **nunca é declarado** nos documentos.
+
+### 🔎 E o que descobrimos nos arquivos CAD
+
+Os **43 arquivos DWG** da pasta [`../06 - Plantas do projeto (CAD)/`](../06%20-%20Plantas%20do%20projeto%20(CAD)/) **têm coordenadas**, e elas **não são geográficas**:
+
+| Verificação | Resultado |
+|---|---|
+| Faixa das coordenadas | E 286.000–331.000 · N 7.390.000–7.470.000 |
+| Projeção que melhor explica | Transversa de Mercator, **meridiano central −45°**, **k = 0,9996** (o mesmo do UTM 23S) |
+| **Erro contra posições reais** | **médio 8,4 km** · mínimo 0,3 km (Campinas) · **máximo 17,8 km** (Francisco Morato) |
+| Correção por transformação rígida (4 parâmetros) | **não corrige** — o erro permanece |
+
+O padrão de erro (pequeno nas pontas, grande no meio do traçado) indica **distorção não rígida**: os DWGs usam um **sistema local de engenharia**, e não o SIRGAS 2000.
+
+⚠️ **Não converta essas coordenadas em latitude/longitude** — o desvio chegaria a 17 km.
+
+O que **é** confiável é a relação **quilometragem ↔ coordenada do desenho**, calibrada por 180 pontos — publicada em [`calibracao_estacas_desenho.csv`](calibracao_estacas_desenho.csv).
 
 👉 **Para obter dados georreferenciados reais**, veja [Solicitando dados georreferenciados](#-solicitando-dados-georreferenciados).
 
 ---
 
 ## 📁 Arquivos
+
+### 0. `calibracao_estacas_desenho.csv` — 180 linhas
+
+Relaciona **quilometragem ↔ coordenada do desenho** para 180 estacas (km 21+800 a 106+700), extraídas da camada `U-HZ-KM` do arquivo `TIC_02_ESTACAS_GERAL.dwg`.
+
+| coluna | descrição |
+|---|---|
+| `estaca` | Estaca no formato `21+800` |
+| `km` / `km_m` | Quilometragem (texto e metros) |
+| `x_desenho_m` / `y_desenho_m` | Coordenada **no sistema local do desenho** |
+| `sistema_coordenadas` | Sempre `SISTEMA LOCAL DO PROJETO (nao georreferenciado)` |
+
+> ⚠️ **Estas coordenadas não são geográficas.** Convertê-las para latitude/longitude gera erro de até 17 km (ver a seção acima).
 
 ### 1. `trechos_e_estacas.csv` — 6 linhas
 
