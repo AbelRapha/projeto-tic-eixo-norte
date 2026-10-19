@@ -30,30 +30,27 @@ adequada ao tamanho da tela.
 
 ---
 
-## `infraestrutura-existente.jpg`
+## `assets/img/infraestrutura-existente.jpg` (e variantes .webp)
 
-| | |
-|---|---|
-| **Conteúdo** | Estação ferroviária existente com cobertura em estrutura metálica, na Linha 7-Rubi |
-| **Fonte** | Programa de Parceria de Investimentos (PPI-SP) |
-| **URL de origem** | `https://www.ppi.sp.gov.br/wp-content/uploads/2025/01/Contrato-TIC-Eixo-Norte.jpg` |
-| **Página de origem** | [Governo de São Paulo assina contrato do TIC Eixo Norte](https://www.ppi.sp.gov.br/governo-de-sao-paulo-assina-contrato-do-tic-eixo-norte) |
-| **Obtida em** | 18/10/2026 |
-| **Tratamento** | Redimensionada e recomprimida (qualidade JPEG 82) |
+**Conteúdo** | Estação Barra Funda, plataforma e cobertura em estrutura metálica, com
+trilhos e passageiros. Barra Funda é o terminal oeste da Linha 7-Rubi, uma das
+linhas que integram a concessão do TIC Eixo Norte.
+**Página de origem** | [Wikimedia Commons, "Estacao Barra Funda.jpg"](https://commons.wikimedia.org/wiki/File:Estacao_Barra_Funda.jpg)
+**Autor** | Alexandre Giesbrecht
+**Licença** | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0) (atribuição obrigatória)
+**Download** | https://commons.wikimedia.org/wiki/Special:FilePath/Estacao%20Barra%20Funda.jpg
 
-### Variantes WebP responsivas
+### Por que esta imagem substituiu a anterior
 
-| Arquivo | Largura | Peso |
-|---|---|---|
-| `infraestrutura-existente-480.webp` | 480 px | **24 KB** |
-| `infraestrutura-existente-800.webp` | 800 px | **67 KB** |
-| `infraestrutura-existente.jpg` (original) | 1536 px | 318 KB |
+A versão anterior vinha do portal PPI-SP e estava-rotulada como estação da Linha 7-Rubi.
+Afotografia, porem, **não e de nenhuma estação da Linha 7**: mostra a Estação
+Ferroviária de Imbariê, no município de Duque de Caxias, no Rio de Janeiro, operada
+pela SuperVia no ramal Vila Inhomirim. O texto de origem estava incorreto e induzia o
+leitor ao erro.
 
-> 📉 **Ganho no celular:** a imagem original tinha 1536 px e era exibida com cerca
-> de 280 px de largura. Com as variantes, o celular passa a baixar 24 KB em vez de
-> 318 KB — redução de **92%** no peso dessa imagem.
-
----
+A imagem atual corrige os dois problemas de uma vez: mostra uma estação que de fato
+integra a concessão, e vem com licença livre e atribuição clara, ao contrário dos
+arquivos do PPI-SP, cujo uso público não é garantido.
 
 ## `assets/img/mapa-tracado.svg`: mapa do traçado
 
