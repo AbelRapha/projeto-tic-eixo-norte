@@ -16,6 +16,18 @@ Elas são reproduzidas aqui para fins informativos, junto de um projeto de trans
 | **Obtida em** | 18/10/2026 |
 | **Tratamento** | Redimensionada e recomprimida (qualidade JPEG 82) |
 
+### Variantes WebP responsivas
+
+| Arquivo | Largura | Peso |
+|---|---|---|
+| `hero-trem-intercidades-480.webp` | 480 px | 39 KB |
+| `hero-trem-intercidades-768.webp` | 768 px | 91 KB |
+| `hero-trem-intercidades.jpg` (original) | 862 px | 143 KB |
+
+São as mesmas imagens, sem alteração de conteúdo: apenas recomprimidas em WebP
+(qualidade 78, método 6) e reduzidas. O `<picture>` do site escolhe a variante
+adequada ao tamanho da tela.
+
 ---
 
 ## `infraestrutura-existente.jpg`
@@ -28,6 +40,18 @@ Elas são reproduzidas aqui para fins informativos, junto de um projeto de trans
 | **Página de origem** | [Governo de São Paulo assina contrato do TIC Eixo Norte](https://www.ppi.sp.gov.br/governo-de-sao-paulo-assina-contrato-do-tic-eixo-norte) |
 | **Obtida em** | 18/10/2026 |
 | **Tratamento** | Redimensionada e recomprimida (qualidade JPEG 82) |
+
+### Variantes WebP responsivas
+
+| Arquivo | Largura | Peso |
+|---|---|---|
+| `infraestrutura-existente-480.webp` | 480 px | **24 KB** |
+| `infraestrutura-existente-800.webp` | 800 px | **67 KB** |
+| `infraestrutura-existente.jpg` (original) | 1536 px | 318 KB |
+
+> 📉 **Ganho no celular:** a imagem original tinha 1536 px e era exibida com cerca
+> de 280 px de largura. Com as variantes, o celular passa a baixar 24 KB em vez de
+> 318 KB — redução de **92%** no peso dessa imagem.
 
 ---
 

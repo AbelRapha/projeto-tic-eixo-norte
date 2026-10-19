@@ -26,6 +26,7 @@
   --sombra-f:0 2px 4px rgba(10,47,36,.08), 0 20px 48px rgba(10,47,36,.14);
 
   --max:1220px;
+  --respiro:44px;
   --display:'Archivo','Arial Narrow',Impact,sans-serif;
   --texto:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
 }
@@ -123,6 +124,8 @@ p:last-child{margin-bottom:0}
   display:flex;align-items:flex-end;
 }
 .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+/* <picture> nao deve gerar caixa propria: o img dentro ja e absoluto */
+.hero-card picture,.foto-card picture{display:contents}
 .hero-overlay{
   position:absolute;inset:0;z-index:-1;
   background:
@@ -158,11 +161,11 @@ p:last-child{margin-bottom:0}
 .btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
 .btn-ghost:hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}
 
-/* faixa de números */
+/* respiro entre o card do hero e a faixa de indicadores */
 .faixa-numeros{
   background:var(--branco);border-radius:var(--r-lg) var(--r-lg) 0 0;
   box-shadow:var(--sombra);display:grid;grid-template-columns:repeat(5,1fr);
-  margin:0 26px;position:relative;z-index:2;
+  margin:var(--respiro) 26px 0;position:relative;z-index:2;
 }
 .faixa-numeros .num{
   padding:30px 22px;text-align:center;border-right:1px solid var(--linha);
@@ -319,6 +322,19 @@ p:last-child{margin-bottom:0}
 @keyframes surgir{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 
 /* tabela */
+.tabela-scroll{
+  border-radius:var(--r-lg);
+  /* a sombra nas bordas some quando o conteudo cabe, e aparece na hora
+     que ha rolagem horizontal - sinaliza ao usuario que a tabela continua */
+  background:
+    linear-gradient(to right, var(--branco) 30%, rgba(255,255,255,0)) left center,
+    linear-gradient(to left, var(--branco) 30%, rgba(255,255,255,0)) right center,
+    radial-gradient(farthest-side at 0 50%, rgba(10,47,36,.18), rgba(10,47,36,0)) left center,
+    radial-gradient(farthest-side at 100% 50%, rgba(10,47,36,.18), rgba(10,47,36,0)) right center;
+  background-repeat:no-repeat;
+  background-size:40px 100%, 40px 100%, 14px 100%, 14px 100%;
+  background-attachment:local, local, scroll, scroll;
+}
 .tabela{width:100%;border-collapse:collapse;background:var(--branco);
   border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sombra)}
 .tabela caption{
@@ -423,7 +439,7 @@ p:last-child{margin-bottom:0}
   .hero{padding:16px 16px 0}
   .hero-card{min-height:480px;border-radius:var(--r-lg)}
   .hero-conteudo{padding:0 0 34px 26px}
-  .faixa-numeros{margin:0 16px;grid-template-columns:repeat(2,1fr)}
+  .faixa-numeros{margin:var(--respiro) 16px 0;grid-template-columns:repeat(2,1fr)}
   .faixa-numeros .num{padding:22px 12px}
   .faixa-numeros .n{font-size:2rem}
   .wrap{padding:0 18px}
@@ -431,14 +447,33 @@ p:last-child{margin-bottom:0}
   .cards-3,.grade-3{grid-template-columns:1fr}
   .linha-tempo{grid-template-columns:1fr 1fr}
   .rodape-grade{grid-template-columns:1fr}
-  .tabela{display:block;overflow-x:auto;white-space:nowrap}
   .ficha-lista>div{grid-template-columns:1fr;gap:2px}
   .lista-simples li{grid-template-columns:92px 1fr}
+
+  /* No celular a tabela vira uma pilha de cartoes, um por linha.
+     Evita rolagem horizontal (que cortava colunas) e reaproveita o rotulo
+     de cada coluna via data-label. */
+  .tabela-scroll{overflow-x:visible;background:none}
+  .tabela{display:block;min-width:0;background:transparent;box-shadow:none;border-radius:0;overflow:visible}
+  .tabela caption{padding:0 0 14px}
+  .tabela thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .tabela tbody{display:grid;gap:14px}
+  .tabela tr{display:block;background:var(--branco);border-radius:var(--r-md);
+    box-shadow:var(--sombra);overflow:hidden;padding:6px 0}
+  .tabela tbody tr:hover{background:var(--branco)}
+  .tabela td{display:grid;grid-template-columns:104px 1fr;gap:14px;align-items:start;
+    border-top:1px solid var(--linha);padding:11px 16px;font-size:.92rem;vertical-align:top}
+  .tabela tbody tr td:first-child{border-top:0;background:var(--sage-050)}
+  .tabela td::before{
+    content:attr(data-label);font-size:.7rem;font-weight:700;color:var(--tinta-40);
+    text-transform:uppercase;letter-spacing:.07em;line-height:1.5;
+  }
 }
 
 @media (max-width:480px){
   .linha-tempo{grid-template-columns:1fr}
   .display{font-size:2.35rem}
+  :root{--respiro:28px}
 }
 
 @media (prefers-reduced-motion:reduce){
@@ -466,7 +501,9 @@ p:last-child{margin-bottom:0}
   gap:10px;
   line-height:1.35;
 }
-.marca{
+/* Pontinho colorido da legenda.
+   Nome proprio (.marca-ponto) para nao colidir com .marca do logo do topo. */
+.marca-ponto{
   flex:0 0 auto;
   width:14px;
   height:14px;

@@ -48,8 +48,19 @@
   <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="hero-card reveal">
-      <img class="hero-img" src="assets/img/hero-trem-intercidades.jpg"
-           alt="Composição do Trem Intercidades da CPTM parada em estação ferroviária, com carroceria vermelha e plataforma ao lado" loading="eager">
+      <picture>
+        <source type="image/webp"
+                srcset="assets/img/hero-trem-intercidades-480.webp 480w,
+                        assets/img/hero-trem-intercidades-768.webp 768w,
+                        assets/img/hero-trem-intercidades.jpg 862w"
+                sizes="100vw">
+        <img class="hero-img" src="assets/img/hero-trem-intercidades.jpg"
+             srcset="assets/img/hero-trem-intercidades-480.webp 480w,
+                     assets/img/hero-trem-intercidades-768.webp 768w,
+                     assets/img/hero-trem-intercidades.jpg 862w"
+             sizes="100vw"
+             alt="Composição do Trem Intercidades da CPTM parada em estação ferroviária, com carroceria vermelha e plataforma ao lado" loading="eager" fetchpriority="high" decoding="async">
+      </picture>
       <div class="hero-overlay"></div>
       <div class="hero-conteudo">
         <p class="eyebrow">Concessão patrocinada · Estado de São Paulo</p>
@@ -110,8 +121,18 @@
 
         <div class="col reveal">
           <figure class="foto-card">
-            <img src="assets/img/infraestrutura-existente.jpg"
-                 alt="Estação ferroviária existente com cobertura em estrutura metálica e trilhos em via principal" loading="lazy">
+            <picture>
+              <source type="image/webp"
+                      srcset="assets/img/infraestrutura-existente-480.webp 480w,
+                              assets/img/infraestrutura-existente-800.webp 800w"
+                      sizes="(max-width:820px) 92vw, 420px">
+              <img src="assets/img/infraestrutura-existente.jpg"
+                   srcset="assets/img/infraestrutura-existente-480.webp 480w,
+                           assets/img/infraestrutura-existente-800.webp 800w"
+                   sizes="(max-width:820px) 92vw, 420px"
+                   alt="Estação ferroviária existente com cobertura em estrutura metálica e trilhos em via principal"
+                   loading="lazy" decoding="async">
+            </picture>
             <figcaption>
               Infraestrutura ferroviária existente na Linha 7-Rubi, que integra a concessão e
               será modernizada e operada pela concessionária.
@@ -287,13 +308,13 @@
         </figcaption>
       </figure>
         <ul class="legenda-mapa" aria-label="Legenda do mapa">
-          <li><span class="marca marca-eixo"></span>Eixo do traçado: km 2+676 a 106+700</li>
-          <li><span class="marca marca-terminal"></span>Terminais: Barra Funda, Jundiaí e Campinas</li>
-          <li><span class="marca marca-tim"></span>Estações do Trem Intermetropolitano (paradores)</li>
-          <li><span class="marca marca-linha7"></span>Estações da Linha 7-Rubi</li>
-          <li><span class="marca marca-sub"></span>Subestações</li>
-          <li><span class="marca marca-oae"></span>Obras de arte especiais</li>
-          <li><span class="marca marca-km"></span>Estacas de controle a cada 10 km</li>
+          <li><span class="marca-ponto marca-eixo"></span>Eixo do traçado: km 2+676 a 106+700</li>
+          <li><span class="marca-ponto marca-terminal"></span>Terminais: Barra Funda, Jundiaí e Campinas</li>
+          <li><span class="marca-ponto marca-tim"></span>Estações do Trem Intermetropolitano (paradores)</li>
+          <li><span class="marca-ponto marca-linha7"></span>Estações da Linha 7-Rubi</li>
+          <li><span class="marca-ponto marca-sub"></span>Subestações</li>
+          <li><span class="marca-ponto marca-oae"></span>Obras de arte especiais</li>
+          <li><span class="marca-ponto marca-km"></span>Estacas de controle a cada 10 km</li>
         </ul>
 
     </div>
@@ -318,6 +339,7 @@
       </div>
 
       <div class="painel is-ativo" id="p-servicos" role="tabpanel">
+        <div class="tabela-scroll" tabindex="0" role="region" aria-label="Comparativo dos três serviços, rolagem horizontal">
         <table class="tabela reveal">
           <caption>Comparativo dos três serviços da concessão</caption>
           <thead>
@@ -325,39 +347,42 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>TIC</strong><br><small>Expresso</small></td>
-              <td>Barra Funda ▸ Jundiaí ▸ Campinas</td>
-              <td>101 km</td><td>64 min</td><td>R$ 50,00 (até R$ 64,00)</td>
+              <td data-label="Serviço"><strong>TIC</strong><br><small>Expresso</small></td>
+              <td data-label="Trajeto">Barra Funda ▸ Jundiaí ▸ Campinas</td>
+              <td data-label="Extensão">101 km</td><td data-label="Tempo">64 min</td><td data-label="Tarifa estimada">R$ 50,00 (até R$ 64,00)</td>
             </tr>
             <tr>
-              <td><strong>TIM</strong><br><small>Intermetropolitano</small></td>
-              <td>Jundiaí ▸ Louveira ▸ Vinhedo ▸ Valinhos ▸ Campinas</td>
-              <td>44 km</td><td>33 min</td><td>R$ 14,05</td>
+              <td data-label="Serviço"><strong>TIM</strong><br><small>Intermetropolitano</small></td>
+              <td data-label="Trajeto">Jundiaí ▸ Louveira ▸ Vinhedo ▸ Valinhos ▸ Campinas</td>
+              <td data-label="Extensão">44 km</td><td data-label="Tempo">33 min</td><td data-label="Tarifa estimada">R$ 14,05</td>
             </tr>
             <tr>
-              <td><strong>Linha 7</strong><br><small>Metropolitano</small></td>
-              <td>Barra Funda ▸ Jundiaí</td>
-              <td>~60,5 km</td><td>61 min</td><td>Tarifa pública</td>
+              <td data-label="Serviço"><strong>Linha 7</strong><br><small>Metropolitano</small></td>
+              <td data-label="Trajeto">Barra Funda ▸ Jundiaí</td>
+              <td data-label="Extensão">~60,5 km</td><td data-label="Tempo">61 min</td><td data-label="Tarifa estimada">Tarifa pública</td>
             </tr>
           </tbody>
         </table>
+        </div>
       </div>
 
       <div class="painel" id="p-traçado" role="tabpanel">
+        <div class="tabela-scroll" tabindex="0" role="region" aria-label="Trechos da concessão, rolagem horizontal">
         <table class="tabela reveal">
           <caption>Divisão oficial da concessão em trechos (estacas de km 2+640 a 106+700)</caption>
           <thead>
             <tr><th>Trecho</th><th>Estaca inicial</th><th>Estaca final</th><th>Extensão</th></tr>
           </thead>
           <tbody>
-            <tr><td>Barra Funda a Perus</td><td>2+640</td><td>21+800</td><td>19,160 km</td></tr>
-            <tr><td>Perus a Botujuru</td><td>21+800</td><td>44+120</td><td>22,320 km</td></tr>
-            <tr><td>Botujuru a Jundiaí</td><td>44+120</td><td>60+800</td><td>16,680 km</td></tr>
-            <tr><td>Jundiaí a Louveira</td><td>60+800</td><td>81+740</td><td>20,940 km</td></tr>
-            <tr><td>Louveira a Valinhos</td><td>81+740</td><td>98+659</td><td>16,919 km</td></tr>
-            <tr><td>Valinhos a Campinas</td><td>98+659</td><td>106+700</td><td>8,041 km</td></tr>
+            <tr><td data-label="Trecho">Barra Funda a Perus</td><td data-label="Estaca inicial">2+640</td><td data-label="Estaca final">21+800</td><td data-label="Extensão">19,160 km</td></tr>
+            <tr><td data-label="Trecho">Perus a Botujuru</td><td data-label="Estaca inicial">21+800</td><td data-label="Estaca final">44+120</td><td data-label="Extensão">22,320 km</td></tr>
+            <tr><td data-label="Trecho">Botujuru a Jundiaí</td><td data-label="Estaca inicial">44+120</td><td data-label="Estaca final">60+800</td><td data-label="Extensão">16,680 km</td></tr>
+            <tr><td data-label="Trecho">Jundiaí a Louveira</td><td data-label="Estaca inicial">60+800</td><td data-label="Estaca final">81+740</td><td data-label="Extensão">20,940 km</td></tr>
+            <tr><td data-label="Trecho">Louveira a Valinhos</td><td data-label="Estaca inicial">81+740</td><td data-label="Estaca final">98+659</td><td data-label="Extensão">16,919 km</td></tr>
+            <tr><td data-label="Trecho">Valinhos a Campinas</td><td data-label="Estaca inicial">98+659</td><td data-label="Estaca final">106+700</td><td data-label="Extensão">8,041 km</td></tr>
           </tbody>
         </table>
+        </div>
         <p class="nota reveal">
           Total de <strong>104,060 km</strong> entre a estaca 2+640 e a estaca 106+700.
           Antes do km 2+640 fica o <strong>Trecho Central Compartilhado</strong>, entre

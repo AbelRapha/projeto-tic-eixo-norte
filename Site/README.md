@@ -93,11 +93,45 @@ Todos sem dependências externas (~5,6 KB):
 
 | Arquivo | Origem |
 |---|---|
-| `hero-trem-intercidades.jpg` | PPI-SP (Estado de São Paulo) |
-| `infraestrutura-existente.jpg` | PPI-SP (Estado de São Paulo) |
+| `hero-trem-intercidades.jpg` (+ variantes `-480`/`-768` WebP) | PPI-SP (Estado de São Paulo) |
+| `infraestrutura-existente.jpg` (+ variantes `-480`/`-800` WebP) | PPI-SP (Estado de São Paulo) |
+
+As variantes em WebP são as mesmas fotografias, recomprimidas e reduzidas. O
+`<picture>` escolhe a menor que serve para a tela atual — no celular a imagem de
+infraestrutura passa de **318 KB para 24 KB**.
 
 ⚠️ **Antes de publicar publicamente, leia [`CREDITOS-IMAGENS.md`](CREDITOS-IMAGENS.md).** As duas fotografias vêm de
 portais oficiais, mas isso não garante domínio público: pode haver direitos de autor de terceiros.
+
+---
+
+## 📱 Comportamento responsivo
+
+Verificado em **10 larguras**: 320, 360, 390, 414, 600, 768, 834, 1024, 1280 e 1440 px.
+
+| Largura | Menu | Tabela | Colunas |
+|---|---|---|---|
+| ≥ 834 px | horizontal na barra | tabela com cabeçalho |/cards em 3 |
+| 600 – 833 px | botão hambúrguer | pilha de cartões | 3 → 2 |
+| ≤ 480 px | botão hambúrguer | pilha de cartões | 1 (linha do tempo) |
+
+Regras que sustentam isso:
+
+- **Sem rolagem horizontal** em nenhuma largura — nenhuma elemento ultrapassa a
+  viewport;
+- **Tabelas viram pilha de cartões** abaixo de 820 px. Cada linha da tabela vira
+  um cartão e o nome da coluna aparece ao lado do valor, via `data-label` em cada
+  `<td>`. O `<thead>` fica oculto visualmente, mas continua no DOM para leitores
+  de tela;
+- **`.marca-ponto`** nomeia o pontinho colorido da legenda do mapa. Antes, a
+  classe se chamava `.marca`, colidia com o logo do cabeçalho e reduzia a área
+  clicável dele a **14 × 14 px**;
+- **`--respiro`** (44 px · 28 px no celular) separa o card do topo da faixa de
+  indicadores.
+
+> 🔎 Depois da animação de revelação (0,7 s), o card do topo sobe 26 px e o
+> respiro cresce de 18 px para 44 px. É o movimento de entrada, não um erro de
+> layout.
 
 ---
 
