@@ -26,7 +26,7 @@
   --sombra-f:0 2px 4px rgba(10,47,36,.08), 0 20px 48px rgba(10,47,36,.14);
 
   --max:1220px;
-  --respiro:44px;
+  --respiro:72px;
   --display:'Archivo','Arial Narrow',Impact,sans-serif;
   --texto:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
 }
@@ -473,7 +473,7 @@ p:last-child{margin-bottom:0}
 @media (max-width:480px){
   .linha-tempo{grid-template-columns:1fr}
   .display{font-size:2.35rem}
-  :root{--respiro:28px}
+  :root{--respiro:36px}
 }
 
 @media (prefers-reduced-motion:reduce){

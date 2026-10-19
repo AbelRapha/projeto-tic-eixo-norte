@@ -126,11 +126,11 @@ Regras que sustentam isso:
 - **`.marca-ponto`** nomeia o pontinho colorido da legenda do mapa. Antes, a
   classe se chamava `.marca`, colidia com o logo do cabeçalho e reduzia a área
   clicável dele a **14 × 14 px**;
-- **`--respiro`** (44 px · 28 px no celular) separa o card do topo da faixa de
+- **`--respiro`** (72 px · 36 px no celular) separa o card do topo da faixa de
   indicadores.
 
 > 🔎 Depois da animação de revelação (0,7 s), o card do topo sobe 26 px e o
-> respiro cresce de 18 px para 44 px. É o movimento de entrada, não um erro de
+> respiro cresce de 46 px para 72 px. É o movimento de entrada, não um erro de
 > layout.
 
 ---
