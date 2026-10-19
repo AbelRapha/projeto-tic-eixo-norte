@@ -1,0 +1,12 @@
+﻿municipio;cod_ibge;dados_publicados_pela_prefeitura;endereco;situacao
+Sao Paulo;3550308;GeoSampa (GeoServer) com 486 camadas: distritos, subprefeituras, zoneamento, uso do solo, bacias hidrograficas, macrozonas;https://wms.geosampa.prefeitura.sp.gov.br/geoserver/web/;aberto
+Caieiras;3509007;Nada vetorial. Apenas o Plano Diretor em PDF (mapa de zoneamento 1:20.000);https://www.caieiras.sp.gov.br/;nao publicado
+Franco da Rocha;3516408;Nada vetorial. Sem geoportal, sem dados abertos;https://www.francodarocha.sp.gov.br/;nao publicado
+Francisco Morato;3516309;Nada vetorial. Plano Diretor em PDF (LC 419/2024). O portal oficial tem certificado TLS invalido;https://www.franciscomorato.sp.gov.br/;nao publicado
+Campo Limpo Paulista;3509601;Nada vetorial. Instrumentos urbanisticos apenas em texto e PDF;https://www.campolimpopaulista.sp.gov.br/;nao publicado
+Varzea Paulista;3556503;Visualizador GeoPixel com bairros, lotes, zoneamento e curvas de nivel. Sem download exposto (WFS responde 404);https://varzeapaulista.geopixel.com.br/geopixelcidades3/;apenas visualizacao
+Jundiai;3525904;GeoJundiai (GeoServer) com 106 camadas WFS: bairros, regioes, macrozoneamento, zoneamento 2024, lotes, bacias, nascentes;https://geo.jundiai.sp.gov.br/geoserver/wfs;aberto
+Louveira;3527306;Portal ArcGIS existe, mas so publica camadas de saneamento. Nada de lotes, zoneamento ou bairros;https://geoportal.louveira.sp.gov.br/portal/;nao publicado
+Vinhedo;3556701;"Sistema Mappa Web para consulta por lote e zonas de uso. Sem download; dados abertos so tem JSON administrativo";https://vinhedo-mappa.mitraonline.com.br/portal/;apenas visualizacao
+Valinhos;3556206;Caderno de Mapas em PDF (14 mapas) e consulta de zoneamento por lote. Sem dado vetorial;https://www.valinhos.sp.gov.br/mapas/;apenas visualizacao
+Campinas;3509502;DIDC: catalogo com link de download SHP. Plano Diretor 2018 (macrozonas, UTB), zoneamento LPous, perimetro urbano MZDO;https://informacao-didc.campinas.sp.gov.br/metadados.php;aberto
