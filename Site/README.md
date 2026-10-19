@@ -7,7 +7,7 @@ Site de acesso público sobre a concessão do **Trem Intercidades Eixo Norte**.
 | `index.html` | Página única, com as 4 seções principais |
 | `assets/css/style.css` | Folha de estilo completa (responsiva, sem framework) |
 | `assets/js/main.js` | Menu móvel, abas, filtro, contadores, scroll-spy, revelação |
-| `assets/img/` | Imagens usadas |
+| `assets/img/` | Imagens usadas e icones do site (favicon em SVG, PNG e ICO) |
 | `CREDITOS-IMAGENS.md` | **Origem e direitos de uso de cada imagem. Leia antes de publicar** |
 
 ---

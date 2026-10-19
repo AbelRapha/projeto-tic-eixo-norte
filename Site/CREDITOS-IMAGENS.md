@@ -42,3 +42,13 @@ Nenhuma imagem de terceiros foi usada.
 > O antigo `assets/img/mapa-tracado.png` (renderização do CAD) foi removido: com
 > linhas de 1 px ele ficava ilegível ao ser reduzido para a largura da tela. A
 > versão em SVG é vetorial, nítida em qualquer tamanho e pesa menos.
+
+## `assets/img/favicon.*` e `apple-touch-icon.png` (icone do site)
+
+**Autoria:** desenhado para este repositório. Quadrado com as cores da marca
+(verde `#0d3b2e` e ambar `#f0b429`), a sigla TIC e o tracinho ambar do logo do cabecalho.
+
+Formatos: SVG (navegadores modernos), PNG 16/32 px, ICO (fallback) e
+apple-touch-icon 180 px (iOS). Todos gerados a partir da mesma marca.
+
+**Licença:** mesma do repositorio (CC BY 4.0).
