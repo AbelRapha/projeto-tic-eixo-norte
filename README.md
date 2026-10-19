@@ -29,7 +29,7 @@ O objetivo é **estruturar os dados presentes em anexos e contratos públicos** 
 
 ## 🚄 O que é o projeto
 
-**TIC Eixo Norte** é uma **PPP de concessão patrocinada** do Estado de São Paulo para a prestação do serviço público de **transporte de passageiros sobre trilhos** no Eixo Norte do **Trem Intercidades (TIC)**, ligando a **capital ao município de Campinas, com parada em Jundiaí** — cerca de **101 km** de trajeto.
+**TIC Eixo Norte** é uma **PPP de concessão patrocinada** do Estado de São Paulo para a prestação do serviço público de **transporte de passageiros sobre trilhos** no Eixo Norte do **Trem Intercidades (TIC)**, ligando a **capital ao município de Campinas, com parada em Jundiaí** — cerca de **104 km** de trajeto.
 
 O empreendimento **não se limita ao trem expresso**. Ele abrange três serviços:
 
@@ -47,7 +47,7 @@ O empreendimento **não se limita ao trem expresso**. Ele abrange três serviço
 | Prazo | **30 anos** de concessão |
 | Investimento | **R$ 14,2 bilhões**, conforme o contrato assinado (ajustado nos Termos Aditivos) |
 | Concessionária | **Consórcio C2 Mobilidade sobre Trilhos** — *TIC Trens* (Grupo **Comporte**, 60% · **CRRC**, 40%) |
-| Extensão | ~**101 km** entre Barra Funda e Campinas |
+| Extensão | ~**104 km** entre Barra Funda e Campinas |
 | Alcance | ~**15 milhões** de pessoas, em **11 municípios** |
 | Velocidade | até **140 km/h** no serviço expresso |
 
@@ -57,7 +57,7 @@ O empreendimento **não se limita ao trem expresso**. Ele abrange três serviço
 
 | Serviço | Trajeto | Extensão | Tempo | Tarifa (estimada) | Observações |
 |---|---|---|---|---|---|
-| **TIC** — Serviço Expresso | São Paulo (Barra Funda) ▸ Jundiaí ▸ Campinas | **101 km** | ~**64 min** | R$ 50,00 em média, chegando a R$ 64,00 | até 140 km/h · 15 trens · capacidade de ~860 lugares sentados |
+| **TIC** — Serviço Expresso | São Paulo (Barra Funda) ▸ Jundiaí ▸ Campinas | **104 km** | ~**64 min** | R$ 50,00 em média, chegando a R$ 64,00 | até 140 km/h · 15 trens · capacidade de ~860 lugares sentados |
 | **TIM** — Trem Intermetropolitano (parador) | Jundiaí ▸ Louveira ▸ Vinhedo ▸ Valinhos ▸ Campinas | **44 km** | ~**33 min** | R$ 14,05 | 7 trens · capacidade para ~2.048 passageiros |
 | **Linha 7–Rubi** (CPTM) | Barra Funda ▸ Jundiaí ▸ Francisco Morato | ~**60,5 km** | ~**61 min** | **R$ 5,20** (tarifa pública) | 17 estações · 30 trens ajustados |
 
