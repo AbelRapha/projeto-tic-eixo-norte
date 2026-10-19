@@ -1,6 +1,6 @@
-# 🌐 Site do Projeto — TIC Eixo Norte
+# 🌐 Site do Projeto: TIC Eixo Norte
 
-Site de acesso público sobre a concessão do **Trem Intercidades — Eixo Norte**.
+Site de acesso público sobre a concessão do **Trem Intercidades Eixo Norte**.
 
 | Arquivo | Descrição |
 |---|---|
@@ -8,20 +8,20 @@ Site de acesso público sobre a concessão do **Trem Intercidades — Eixo Norte
 | `assets/css/style.css` | Folha de estilo completa (responsiva, sem framework) |
 | `assets/js/main.js` | Menu móvel, abas, filtro, contadores, scroll-spy, revelação |
 | `assets/img/` | Imagens usadas |
-| `CREDITOS-IMAGENS.md` | **Origem e direitos de uso de cada imagem — leia antes de publicar** |
+| `CREDITOS-IMAGENS.md` | **Origem e direitos de uso de cada imagem. Leia antes de publicar** |
 
 ---
 
 ## 🚀 Como abrir
 
-**Opção 1 — abrir direto no navegador**
+**Opção 1: abrir direto no navegador**
 
 ```bash
 # a partir da pasta Site/
 start index.html
 ```
 
-**Opção 2 — servidor local** (recomendado, evita restrição de `file://`)
+**Opção 2: servidor local** (recomendado, evita restrição de `file://`)
 
 ```bash
 cd Site
@@ -39,7 +39,7 @@ Todos os botões que levam aos documentos públicos usam **URL absoluta do GitHu
 https://github.com/AbelRapha/projeto-tic-eixo-norte/tree/main/Dados%20P%C3%BAblicos
 ```
 
-**Vantagem:** funcionam em **qualquer** hospedagem — GitHub Pages, Vercel, Cloudflare Pages, um servidor próprio ou mesmo abrindo o HTML direto do disco. Sem depender de onde o site foi publicado.
+**Vantagem:** funcionam em **qualquer** hospedagem como GitHub Pages, Vercel, Cloudflare Pages, um servidor próprio ou mesmo abrindo o HTML direto do disco. Sem depender de onde o site foi publicado.
 
 | Link | Destino |
 |---|---|
@@ -53,7 +53,7 @@ https://github.com/AbelRapha/projeto-tic-eixo-norte/tree/main/Dados%20P%C3%BAbli
 
 Todos abrem em nova aba (`target="_blank"`) com `rel="noopener"`, e **foram verificados como HTTP 200** e confirmados pela API do GitHub.
 
-> ⚠️ **Se você renomear ou mover as pastas**, é preciso atualizar essas URLs — elas contêm o nome das pastas.
+> ⚠️ **Se você renomear ou mover as pastas**, é preciso atualizar essas URLs, pois elas contêm o nome das pastas.
 
 ---
 
@@ -72,12 +72,12 @@ Todos abrem em nova aba (`target="_blank"`) com `rel="noopener"`, e **foram veri
 
 Todos sem dependências externas (~5,6 KB):
 
-- **Menu móvel** — colapsa abaixo de 820 px
-- **Abas** — em "Informações técnicas", sem recarga
-- **Filtro de cidades** — por região (11 = 4 capital + 3 aglomeração + 4 RMS)
-- **Contadores animados** — numbers que contam ao entrar na viewport
-- **Scroll-spy** — destaca o link da seção atual
-- **Revelação no scroll** — `IntersectionObserver` com `threshold` baixo
+- **Menu móvel:** colapsa abaixo de 820 px
+- **Abas:** em "Informações técnicas", sem recarga
+- **Filtro de cidades:** por região (11 = 4 capital + 3 aglomeração + 4 RMS)
+- **Contadores animados:** números que contam ao entrar na viewport
+- **Scroll-spy:** destaca o link da seção atual
+- **Revelação no scroll:** `IntersectionObserver` com `threshold` baixo
 
 ### Acessibilidade
 
@@ -85,7 +85,7 @@ Todos sem dependências externas (~5,6 KB):
 - Link "pular para o conteúdo"
 - `aria-*` nos controles (menu, abas, chips)
 - Respeita `prefers-reduced-motion`
-- **Guarda `.js`** — sem JavaScript, **todo o conteúdo fica visível** (sem tela em branco)
+- **Guarda `.js`:** sem JavaScript, **todo o conteúdo fica visível** (sem tela em branco)
 
 ---
 
@@ -97,7 +97,7 @@ Todos sem dependências externas (~5,6 KB):
 | `infraestrutura-existente.jpg` | PPI-SP (Estado de São Paulo) |
 
 ⚠️ **Antes de publicar publicamente, leia [`CREDITOS-IMAGENS.md`](CREDITOS-IMAGENS.md).** As duas fotografias vêm de
-portais oficiais, mas isso não garante domínio público — pode haver direitos de autor de terceiros.
+portais oficiais, mas isso não garante domínio público: pode haver direitos de autor de terceiros.
 
 ---
 
@@ -119,7 +119,7 @@ Todos os dados quantitativos vêm de:
 ## 🎨 Identidade visual
 
 Inspirado no modelo [Nigeria Railway Corporation Redesign](https://dribbble.com/shots/25011221-Nigeria-Railway-Corporation-Redesign)
-(Dribbble, de Stanley Chidubem) — **apenas como referência de estilo**, sem copiar a imagem.
+(Dribbble, de Stanley Chidubem), **apenas como referência de estilo**, sem copiar a imagem.
 
 | Token | Valor | Uso |
 |---|---|---|
@@ -128,7 +128,7 @@ Inspirado no modelo [Nigeria Railway Corporation Redesign](https://dribbble.com/
 | `--sage-100` | `#e4ece7` | seções alternadas, fundo do hero |
 | `--ambar` | `#f0b429` | acento (olho, ano atual, destaques) |
 | `--display` | Archivo 900 | títulos em caixa alta |
-| `--texto` | Inter 400–700 | corpo |
+| `--texto` | Inter 400 a 700 | corpo |
 
 Tipografia via [Google Fonts](https://fonts.google.com/), com fallback de sistema caso a rede falhe.
 

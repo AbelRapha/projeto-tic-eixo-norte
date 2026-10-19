@@ -1,5 +1,5 @@
 /* =============================================================
-   TIC Eixo Norte — interações do site
+   TIC Eixo Norte: interações do site
    Sem dependências externas.
    ============================================================= */
 (function () {
